@@ -1,9 +1,9 @@
 ---
 title: Insiders
 slug: insiders
-publish: draft
+publish: false
 date: 2024-02-29 15:46:47
-update: 2024-07-16 17:53:10
+update: 2024-07-18 00:03:14
 ---
 
 *MkDocs Publisher* follows the **sponsorware** release strategy, which means that all new features are released first exclusively to sponsors as part of the [Insiders](#What%20is%20Insiders?).
