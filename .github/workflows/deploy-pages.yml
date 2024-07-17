@@ -67,7 +67,7 @@ jobs:
           user-email: ${{ secrets.USER_EMAIL }}
           source-directory: docs
           destination-github-username: ${{ secrets.USER_NAME }}
-          destination-repository-name: mkdocs-publisher
+          destination-repository-name: mkdocs-publisher.github.io
           target-branch: docs
       - name: Save MkDocs files cache
         uses: actions/cache/save@v3
