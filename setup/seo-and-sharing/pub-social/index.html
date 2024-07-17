@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<meta content="Setting up Publisher for MkDocs social cards plugin for social services sharing" name="description">
+<meta content="Maciej 'maQ' Kusz" name="author">
+<link href="https://mkdocs-publisher.github.io/setup/seo-and-sharing/pub-social/" rel="canonical">
+<link href="../../general/pub-obsidian/" rel="prev">
+<link href="../pub-minifier/" rel="next">
+<link href="../../../publisher_icon.png" rel="icon">
+<meta content="mkdocs-1.5.3, mkdocs-material-9.5.18" name="generator">
+<title>
+Setting up social cards - Publisher for MkDocs
+</title>
+<link href="../../../assets/stylesheets/main.66ac8b77.min.css" rel="stylesheet">
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet">
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CLato:400,400i,700,700i&amp;display=fallback" rel="stylesheet">
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Lato"}</style>
+<link href="../../../assets/stylesheets/publisher.css" rel="stylesheet">
+<link href="../../../assets/stylesheets/blog.min.css" rel="stylesheet">
+<link href="../../../assets/stylesheets/blog.min.css.map" rel="stylesheet">
+<link href="../../../assets/stylesheets/obsidian.min.css" rel="stylesheet">
+<link href="../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet">
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<meta content="article" property="og:type">
+<meta content="Setting up social cards - Publisher for MkDocs" property="og:title">
+<meta content="Setting up Publisher for MkDocs social cards plugin for social services sharing" property="og:description">
+<meta content="Publisher for MkDocs" property="og:site_name">
+<meta content="en_US" property="og:locale">
+<meta content="https://mkdocs-publisher.github.io/setup/seo-and-sharing/pub-social/" property="og:url">
+<meta content="summary" property="twitter:card">
+<meta content="Setting up social cards - Publisher for MkDocs" property="twitter:title">
+<meta content="Setting up Publisher for MkDocs social cards plugin for social services sharing" property="twitter:description">
+</head>
+<body data-md-color-accent="orange" data-md-color-primary="orange" data-md-color-scheme="default" dir="ltr">
+<input type="checkbox" id="__drawer" class="md-toggle" autocomplete="off" data-md-toggle="drawer">
+<input type="checkbox" id="__search" class="md-toggle" autocomplete="off" data-md-toggle="search">
+<label for="__drawer" class="md-overlay">
+</label>
+<div data-md-component="skip">
+<a href="#setting-up-social-cards-plugin" class="md-skip">
+Skip to content
+</a>
+</div>
+<div data-md-component="announce">
+<aside class="md-banner">
+<div class="md-grid md-banner__inner md-typeset">
+<div>
+Now you can become a
+<a href="https://github.com/sponsors/mkdocs-publisher">
+sponsor
+</a>
+of this project.
+<span class="twemoji heart">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z">
+</path>
+</svg>
+</span>
+</div>
+</div>
+</aside>
+</div>
+<header class="md-header" data-md-component="header">
+<nav class="md-grid md-header__inner" aria-label="Header">
+<a href="https://mkdocs-publisher.github.io/" class="md-header__button md-logo" title="Publisher for MkDocs" data-md-component="logo" aria-label="Publisher for MkDocs">
+<img alt="logo" src="../../../publisher_logo.png">
+</a>
+<label for="__drawer" class="md-icon md-header__button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z">
+</path>
+</svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+Publisher for MkDocs
+</span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+Setting up social cards
+</span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input type="radio" id="__palette_0" class="md-option" aria-label="Switch to dark mode" data-md-color-accent="orange" data-md-color-media="" data-md-color-primary="orange" data-md-color-scheme="default" name="__palette">
+<label for="__palette_1" class="md-icon md-header__button" hidden title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z">
+</path>
+</svg>
+</label>
+<input type="radio" id="__palette_1" class="md-option" aria-label="Switch to light mode" data-md-color-accent="orange" data-md-color-media="" data-md-color-primary="orange" data-md-color-scheme="slate" name="__palette">
+<label for="__palette_0" class="md-icon md-header__button" hidden title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z">
+</path>
+</svg>
+</label>
+</form>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color)for([key,value]of("(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")),Object.entries(palette.color)))document.body.setAttribute("data-md-color-"+key,value)</script>
+<label for="__search" class="md-icon md-header__button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
+</path>
+</svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label for="__search" class="md-search__overlay">
+</label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input type="text" class="md-search__input" aria-label="Search" name="query" autocapitalize="off" autocomplete="off" autocorrect="off" data-md-component="search-query" placeholder="Search" required spellcheck="false">
+<label for="__search" class="md-icon md-search__icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
+</path>
+</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z">
+</path>
+</svg>
+</label>
+<nav class="md-search__options" aria-label="Search">
+<a href="javascript:void(0)" class="md-icon md-search__icon" title="Share" data-md-component="search-share" aria-label="Share" data-clipboard="" data-clipboard-text="" tabindex="-1">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z">
+</path>
+</svg>
+</a>
+<button class="md-icon md-search__icon" type="reset" aria-label="Clear" tabindex="-1" title="Clear">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+</path>
+</svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest">
+</div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+Initializing search
+</div>
+<ol class="md-search-result__list" role="presentation">
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a href="https://github.com/mkusz/mkdocs-publisher/" class="md-source" title="Go to repository" data-md-component="source">
+<div class="md-icon md-source__icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+<!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.-->
+<path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z">
+</path>
+</svg>
+</div>
+<div class="md-source__repository">
+mkdocs-publisher
+</div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a href="../../.." class="md-tabs__link">
+Home
+</a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a href="../../installation/" class="md-tabs__link">
+Setup
+</a>
+</li>
+<li class="md-tabs__item">
+<a href="../../../index-0/" class="md-tabs__link">
+Blog
+</a>
+</li>
+<li class="md-tabs__item">
+<a href="../../../development/changelog/" class="md-tabs__link">
+Development
+</a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-grid md-main__inner">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--lifted md-nav--primary" aria-label="Navigation" data-md-level="0">
+<label for="__drawer" class="md-nav__title">
+<a href="https://mkdocs-publisher.github.io/" class="md-logo md-nav__button" title="Publisher for MkDocs" data-md-component="logo" aria-label="Publisher for MkDocs">
+<img alt="logo" src="../../../publisher_logo.png">
+</a>
+Publisher for MkDocs
+</label>
+<div class="md-nav__source">
+<a href="https://github.com/mkusz/mkdocs-publisher/" class="md-source" title="Go to repository" data-md-component="source">
+<div class="md-icon md-source__icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+<!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.-->
+<path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z">
+</path>
+</svg>
+</div>
+<div class="md-source__repository">
+mkdocs-publisher
+</div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a href="../../.." class="md-nav__link">
+<span class="md-ellipsis">
+Home
+</span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested md-nav__item--section md-nav__item--active">
+<input type="checkbox" id="__nav_2" class="md-toggle md-nav__toggle" checked>
+<label for="__nav_2" class="md-nav__link" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+Setup
+</span>
+<span class="md-icon md-nav__icon">
+</span>
+</label>
+<nav class="md-nav" data-md-level="1" aria-expanded="true" aria-labelledby="__nav_2_label">
+<label for="__nav_2" class="md-nav__title">
+<span class="md-icon md-nav__icon">
+</span>
+Setup
+</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a href="../../installation/" class="md-nav__link">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6h16v10H4m16 2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2H0v2h24v-2h-4Z">
+</path>
+</svg>
+<span class="md-ellipsis">
+Installation
+</span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested md-nav__item--section">
+<input type="checkbox" id="__nav_2_2" class="md-toggle md-nav__toggle">
+<label for="__nav_2_2" class="md-nav__link" id="__nav_2_2_label" tabindex="">
+<span class="md-ellipsis">
+General
+</span>
+<span class="md-icon md-nav__icon">
+</span>
+</label>
+<nav class="md-nav" data-md-level="2" aria-expanded="false" aria-labelledby="__nav_2_2_label">
+<label for="__nav_2_2" class="md-nav__title">
+<span class="md-icon md-nav__icon">
+</span>
+General
+</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a href="../../general/pub-meta/" class="md-nav__link">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 3h6v4H3V3m12 7h6v4h-6v-4m0 7h6v4h-6v-4m-2-4H7v5h6v2H5V9h2v2h6v2Z">
+</path>
+</svg>
+<span class="md-ellipsis">
+Setting up meta
+</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a href="../../general/pub-blog/" class="md-nav__link">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 7v12h15v2H4c-2 0-2-2-2-2V7h2m17.3-4H7.7C6.76 3 6 3.7 6 4.55v10.9c0 .86.76 1.55 1.7 1.55h13.6c.94 0 1.7-.69 1.7-1.55V4.55C23 3.7 22.24 3 21.3 3M8 5h5v6H8V5m13 10H8v-2h13v2m0-4h-6V9h6v2m0-4h-6V5h6v2Z">
+</path>
+</svg>
+<span class="md-ellipsis">
+Setting up a blog
+</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a href="../../general/pub-obsidian/" class="md-nav__link">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path 
+d="M19.355 18.538a68.967 68.959 0 0 0 1.858-2.954.81.81 0 0 0-.062-.9c-.516-.685-1.504-2.075-2.042-3.362-.553-1.321-.636-3.375-.64-4.377a1.707 1.707 0 0 0-.358-1.05l-3.198-4.064a3.744 3.744 0 0 1-.076.543c-.106.503-.307 1.004-.536 1.5-.134.29-.29.6-.446.914l-.31.626c-.516 1.068-.997 2.227-1.132 3.59-.124 1.26.046 2.73.815 4.481.128.011.257.025.386.044a6.363 6.363 0 0 1 3.326 1.505c.916.79 1.744 1.922 2.415 3.5zM8.199 22.569c.073.012.146.02.22.02.78.024 2.095.092 3.16.29.87.16 2.593.64 4.01 1.055 1.083.316 2.198-.548 2.355-1.664.114-.814.33-1.735.725-2.58l-.01.005c-.67-1.87-1.522-3.078-2.416-3.849a5.295 5.295 0 0 0-2.778-1.257c-1.54-.216-2.952.19-3.84.45.532 2.218.368 4.829-1.425 7.531zM5.533 9.938c-.023.1-.056.197-.098.29L2.82 16.059a1.602 1.602 0 0 0 .313 1.772l4.116 4.24c2.103-3.101 1.796-6.02.836-8.3-.728-1.73-1.832-3.081-2.55-3.831zM9.32 14.01c.615-.183 1.606-.465 2.745-.534-.683-1.725-.848-3.233-.716-4.577.154-1.552.7-2.847 1.235-3.95.113-.235.223-.454.328-.664.149-.297.288-.577.419-.86.217-.47.379-.885.46-1.27.08-.38.08-.72-.014-1.043-.095-.325-.297-.675-.68-1.06a1.6 1.6 0 0 0-1.475.36l-4.95 4.452a1.602 1.602 0 0 0-.513.952l-.427 2.83c.672.59 2.328 2.316 3.335 4.711.09.21.175.43.253.653z">
+</path>
+</svg>
+<span class="md-ellipsis">
+Setting up Obsidian
+</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested md-nav__item--section md-nav__item--active">
+<input type="checkbox" id="__nav_2_3" class="md-toggle md-nav__toggle" checked>
+<label for="__nav_2_3" class="md-nav__link" id="__nav_2_3_label" tabindex="">
+<span class="md-ellipsis">
+SEO &amp; Sharing
+</span>
+<span class="md-icon md-nav__icon">
+</span>
+</label>
+<nav class="md-nav" data-md-level="2" aria-expanded="true" aria-labelledby="__nav_2_3_label">
+<label for="__nav_2_3" class="md-nav__title">
+<span class="md-icon md-nav__icon">
+</span>
+SEO &amp; Sharing
+</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input type="checkbox" id="__toc" class="md-toggle md-nav__toggle">
+<label for="__toc" class="md-nav__link md-nav__link--active">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="m21 12-7-7v4C7 10 4 15 3 20c2.5-3.5 6-5.1 11-5.1V19l7-7Z">
+</path>
+</svg>
+<span class="md-ellipsis">
+Setting up social cards
+</span>
+<span class="md-icon md-nav__icon">
+</span>
+</label>
+<a href="./" class="md-nav__link md-nav__link--active">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="m21 12-7-7v4C7 10 4 15 3 20c2.5-3.5 6-5.1 11-5.1V19l7-7Z">
+</path>
+</svg>
+<span class="md-ellipsis">
+Setting up social cards
+</span>
+</a>
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<label for="__toc" class="md-nav__title">
+<span class="md-icon md-nav__icon">
+</span>
+Table of contents
+</label>
+<ul class="md-nav__list" data-md-scrollfix="" data-md-component="toc">
+<li class="md-nav__item">
+<a href="#introduction" class="md-nav__link">
+<span class="md-ellipsis">
+Introduction
+</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a href="#document-metadata" class="md-nav__link">
+<span class="md-ellipsis">
+Document metadata
+</span>
+</a>
+<nav class="md-nav" aria-label="Document metadata">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a href="#title" class="md-nav__link">
+<span class="md-ellipsis">
+Title
+</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a href="#configuration" class="md-nav__link">
+<span class="md-ellipsis">
+Configuration
+</span>
+</a>
+<nav class="md-nav" aria-label="Configuration">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a href="#open-graph-cards" class="md-nav__link">
+<span class="md-ellipsis">
+Open Graph cards
+</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a href="#twitter-cards" class="md-nav__link">
+<span class="md-ellipsis">
+Twitter cards
+</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a href="#metadata-keys-names" class="md-nav__link">
+<span class="md-ellipsis">
+Metadata keys names
+</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a href="#site-name-in-title" class="md-nav__link">
+<span class="md-ellipsis">
+Site name in title
+</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a href="../pub-minifier/" class="md-nav__link">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.5 5.5a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2 2 2 0 0 0 2 2m-3.6 13.9 1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3A7.298 7.298 0 0 0 22 13v-2c-1.76.03-3.4-.89-4.3-2.4l-1-1.6c-.36-.6-1-1-1.7-1-.3 0-.5.1-.8.1L9 8.3V13h2V9.6l1.8-.7-1.6 8.1-4.9-1-.4 2 7 1.4M4 9a1 1 0 0 1-1-1 1 1 0 0 1 1-1h3v2H4m1-4a1 1 0 0 1-1-1 1 1 0 0 1 1-1h5v2H5m-2 8a1 1 0 0 1-1-1 1 1 0 0 1 1-1h4v2H3Z">
+</path>
+</svg>
+<span class="md-ellipsis">
+Setting up minifier
+</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested md-nav__item--section">
+<input type="checkbox" id="__nav_2_4" class="md-toggle md-nav__toggle">
+<label for="__nav_2_4" class="md-nav__link" id="__nav_2_4_label" tabindex="">
+<span class="md-ellipsis">
+Development
+</span>
+<span class="md-icon md-nav__icon">
+</span>
+</label>
+<nav class="md-nav" data-md-level="2" aria-expanded="false" aria-labelledby="__nav_2_4_label">
+<label for="__nav_2_4" class="md-nav__title">
+<span class="md-icon md-nav__icon">
+</span>
+Development
+</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a href="../../development/pub-debugger/" class="md-nav__link">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 13h2v1h-2v-1m10-8v6c0 5.5-3.8 10.7-9 12-5.2-1.3-9-6.5-9-12V5l9-4 9 4m-4 5h-2.2c-.2-.6-.6-1.1-1.1-1.5l1.2-1.2-.7-.7L12.8 8H12c-.2 0-.5 0-.7.1L9.9 6.6l-.8.8 1.2 1.2c-.5.3-.9.8-1.1 1.4H7v1h2v1H7v1h2v1H7v1h2.2c.4 1.2 1.5 2 2.8 2s2.4-.8 2.8-2H17v-1h-2v-1h2v-1h-2v-1h2v-1m-6 2h2v-1h-2v1Z">
+</path>
+</svg>
+<span class="md-ellipsis">
+Setting up debugger
+</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input type="checkbox" id="__nav_3" class="md-toggle md-nav__toggle">
+<label for="__nav_3" class="md-nav__link" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+Blog
+</span>
+<span class="md-icon md-nav__icon">
+</span>
+</label>
+<nav class="md-nav" data-md-level="1" aria-expanded="false" aria-labelledby="__nav_3_label">
+<label for="__nav_3" class="md-nav__title">
+<span class="md-icon md-nav__icon">
+</span>
+Blog
+</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a href="../../../index-0/" class="md-nav__link">
+<span class="md-ellipsis">
+index-0
+</span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input type="checkbox" id="__nav_3_2" class="md-toggle md-nav__toggle">
+<label for="__nav_3_2" class="md-nav__link" id="__nav_3_2_label" tabindex="0">
+<span class="md-ellipsis">
+Archive
+</span>
+<span class="md-icon md-nav__icon">
+</span>
+</label>
+<nav class="md-nav" data-md-level="2" aria-expanded="false" aria-labelledby="__nav_3_2_label">
+<label for="__nav_3_2" class="md-nav__title">
+<span class="md-icon md-nav__icon">
+</span>
+Archive
+</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a href="../../../blog/archive/2024/" class="md-nav__link">
+<span class="md-ellipsis">
+2024
+</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a href="../../../blog/archive/2023/" class="md-nav__link">
+<span class="md-ellipsis">
+2023
+</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input type="checkbox" id="__nav_3_3" class="md-toggle md-nav__toggle">
+<label for="__nav_3_3" class="md-nav__link" id="__nav_3_3_label" tabindex="0">
+<span class="md-ellipsis">
+Categories
+</span>
+<span class="md-icon md-nav__icon">
+</span>
+</label>
+<nav class="md-nav" data-md-level="2" aria-expanded="false" aria-labelledby="__nav_3_3_label">
+<label for="__nav_3_3" class="md-nav__title">
+<span class="md-icon md-nav__icon">
+</span>
+Categories
+</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a href="../../../blog/categories/release/" class="md-nav__link">
+<span class="md-ellipsis">
+release
+</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input type="checkbox" id="__nav_3_4" class="md-toggle md-nav__toggle">
+<label for="__nav_3_4" class="md-nav__link" id="__nav_3_4_label" tabindex="0">
+<span class="md-ellipsis">
+Tags
+</span>
+<span class="md-icon md-nav__icon">
+</span>
+</label>
+<nav class="md-nav" data-md-level="2" aria-expanded="false" aria-labelledby="__nav_3_4_label">
+<label for="__nav_3_4" class="md-nav__title">
+<span class="md-icon md-nav__icon">
+</span>
+Tags
+</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a href="../../../blog/tags/v0.x/" class="md-nav__link">
+<span class="md-ellipsis">
+v0.x
+</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a href="../../../blog/tags/v1.x/" class="md-nav__link">
+<span class="md-ellipsis">
+v1.x
+</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input type="checkbox" id="__nav_4" class="md-toggle md-nav__toggle">
+<label for="__nav_4" class="md-nav__link" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+Development
+</span>
+<span class="md-icon md-nav__icon">
+</span>
+</label>
+<nav class="md-nav" data-md-level="1" aria-expanded="false" aria-labelledby="__nav_4_label">
+<label for="__nav_4" class="md-nav__title">
+<span class="md-icon md-nav__icon">
+</span>
+Development
+</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a href="../../../development/changelog/" class="md-nav__link">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="m14 3-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7v2l4-3-4-3v2H4V3h10m7 7v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-2h2v2h11v-9h-5V7H8v6H6V7a2 2 0 0 1 2-2h8l5 5Z">
+</path>
+</svg>
+<span class="md-ellipsis">
+Changelog
+</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a href="../../../development/development/" class="md-nav__link">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 10h-2V8h2m0 5h-2v-2h2m-3-1h-2V8h2m0 5h-2v-2h2m0 6H8v-2h8m-9-5H5V8h2m0 5H5v-2h2m1 0h2v2H8m0-5h2v2H8m3 1h2v2h-2m0-5h2v2h-2m9-5H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Z">
+</path>
+</svg>
+<span class="md-ellipsis">
+Development
+</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a href="../../../development/versioning/" class="md-nav__link">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.003 7.754a.75.75 0 0 1 .75-.75h5.232a.75.75 0 0 1 .53 1.28l-2.776 2.777c.55.097 1.057.253 1.492.483.905.477 1.504 1.284 1.504 2.418 0 .966-.471 1.75-1.172 2.27-.687.511-1.587.77-2.521.77-1.367 0-2.274-.528-2.667-.756a.75.75 0 0 1 .755-1.297c.331.193.953.553 1.912.553.673 0 1.243-.188 1.627-.473.37-.275.566-.635.566-1.067 0-.5-.219-.836-.703-1.091-.538-.284-1.375-.443-2.471-.443a.75.75 0 0 1-.53-1.28l2.643-2.644h-3.421a.75.75 0 0 1-.75-.75ZM7.88 15.215a1.4 1.4 0 0 0-1.446.83.75.75 0 0 1-1.37-.61 2.899 2.899 0 0 1 2.986-1.71c.589.06 1.139.323 1.557.743.434.446.685 1.058.685 1.778 0 1.641-1.254 2.437-2.12 2.986-.538.341-1.18.694-1.495 1.273H9.75a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75c0-1.799 1.337-2.63 2.243-3.21 1.032-.659 1.55-1.031 1.55-1.8 0-.355-.116-.584-.26-.732a1.071 1.071 0 0 0-.652-.298Zm.234-13.121a.75.75 0 0 1 .386.656V9h1.252a.75.75 0 0 1 0 1.5H5.75a.75.75 0 0 1 0-1.5H7V4.103l-.853.533a.749.749 0 1 1-.795-1.272l2-1.25a.749.749 0 0 1 .762-.02Z">
+</path>
+</svg>
+<span class="md-ellipsis">
+Versioning
+</span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input type="checkbox" id="__nav_4_4" class="md-toggle md-nav__toggle">
+<label for="__nav_4_4" class="md-nav__link" id="__nav_4_4_label" tabindex="0">
+<span class="md-ellipsis">
+Other
+</span>
+<span class="md-icon md-nav__icon">
+</span>
+</label>
+<nav class="md-nav" data-md-level="2" aria-expanded="false" aria-labelledby="__nav_4_4_label">
+<label for="__nav_4_4" class="md-nav__title">
+<span class="md-icon md-nav__icon">
+</span>
+Other
+</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a href="../../../development/other/backlog/" class="md-nav__link">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.5 11 13 7.5l1.4-1.4 2.1 2.1L20.7 4l1.4 1.4-5.6 5.6M11 7H2v2h9V7m10 6.4L19.6 12 17 14.6 14.4 12 13 13.4l2.6 2.6-2.6 2.6 1.4 1.4 2.6-2.6 2.6 2.6 1.4-1.4-2.6-2.6 2.6-2.6M11 15H2v2h9v-2Z">
+</path>
+</svg>
+<span class="md-ellipsis">
+Backlog
+</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<label for="__toc" class="md-nav__title">
+<span class="md-icon md-nav__icon">
+</span>
+Table of contents
+</label>
+<ul class="md-nav__list" data-md-scrollfix="" data-md-component="toc">
+<li class="md-nav__item">
+<a href="#introduction" class="md-nav__link">
+<span class="md-ellipsis">
+Introduction
+</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a href="#document-metadata" class="md-nav__link">
+<span class="md-ellipsis">
+Document metadata
+</span>
+</a>
+<nav class="md-nav" aria-label="Document metadata">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a href="#title" class="md-nav__link">
+<span class="md-ellipsis">
+Title
+</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a href="#configuration" class="md-nav__link">
+<span class="md-ellipsis">
+Configuration
+</span>
+</a>
+<nav class="md-nav" aria-label="Configuration">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a href="#open-graph-cards" class="md-nav__link">
+<span class="md-ellipsis">
+Open Graph cards
+</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a href="#twitter-cards" class="md-nav__link">
+<span class="md-ellipsis">
+Twitter cards
+</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a href="#metadata-keys-names" class="md-nav__link">
+<span class="md-ellipsis">
+Metadata keys names
+</span>
+</a>
+</li>
+<li class="md-nav__item">
+<a href="#site-name-in-title" class="md-nav__link">
+<span class="md-ellipsis">
+Site name in title
+</span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-typeset md-content__inner">
+<a href="https://mkdocs-publisher.github.io/edit/main/mkdocs_publisher_docs/03_setup/03_seo_and_sharing/01_setting-up-social-cards.md" class="md-icon md-content__button" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z">
+</path>
+</svg>
+</a>
+<a href="https://mkdocs-publisher.github.io/raw/main/mkdocs_publisher_docs/03_setup/03_seo_and_sharing/01_setting-up-social-cards.md" class="md-icon md-content__button" title="View source of this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z">
+</path>
+</svg>
+</a>
+<h1 id="setting-up-social-cards-plugin">
+Setting up social cards plugin
+<a href="#setting-up-social-cards-plugin" class="headerlink" title="Anchor link to this section for reference">
+¶
+</a>
+</h1>
+<h2 id="introduction">
+Introduction
+<a href="#introduction" class="headerlink" title="Anchor link to this section for reference">
+¶
+</a>
+</h2>
+<p>
+When you are a blogger or a person who wants to publish some documentation, book or any other piece of written text, you probably also want to share it over social media. Most platforms (like Facebook, LinkedIn, etc.) uses some web page metadata called
+<a href="https://ogp.me">
+Open Graph
+</a>
+. Twitter is using part of this data and some additional metadata called
+<a href="https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards">
+Twitter Cards
+</a>
+. No matter if you want to share your text with Facebook or Twitter, MkDocs Publisher is here to help you with this task and is doing it (almost) fully automatically. You don't have to edit any template like it's needed when you would like to use similar functionality from
+<a href="https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards/?h=social">
+Material for MkDosc
+</a>
+theme (at least it's true for
+<code>
+v9.1.5
+</code>
+). At this time (MkDocs Publisher
+<code>
+v0.5.0
+</code>
+) it's not possible to auto-generate a whole social card (this task is added to the
+<a href="../../../development/other/backlog/" id="335e3444e8e9089d1f35274d3512cacc">
+backlog
+</a>
+). However, it's possible to add your image as a preview with additional description, etc.
+</p>
+<h2 id="document-metadata">
+Document metadata
+<a href="#document-metadata" class="headerlink" title="Anchor link to this section for reference">
+¶
+</a>
+</h2>
+<p>
+More about document metadata you can read in the document related to setting up the
+<a href="../../general/pub-meta/#document-meta-data" id="7934f0dac12849c1991148c38f61426e">
+meta plugin
+</a>
+.
+</p>
+<p>
+Some data used by social cards is global (like site name) but some are unique per document. Data needed and optional that is needed by social card is:
+</p>
+<ul>
+<li>
+(required)
+<code>
+title
+</code>
+- document title (30–65 characters),
+</li>
+<li>
+(required)
+<code>
+description
+</code>
+- short document description (120–350 characters),
+</li>
+<li>
+(optional)
+<code>
+image
+</code>
+- link to an image (1200×630 pixels).
+</li>
+</ul>
+<div class="tabbed-alternate tabbed-set" data-tabs="1:1">
+<input type="radio" id="examplemd" name="__tabbed_1" checked>
+<div class="tabbed-labels">
+<label for="examplemd">
+<span class="twemoji">
+<svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.85 3c.63 0 1.15.52 1.14 1.15v7.7c0 .63-.51 1.15-1.15 1.15H1.15C.52 13 0 12.48 0 11.84V4.15C0 3.52.52 3 1.15 3ZM9 11V5H7L5.5 7 4 5H2v6h2V8l1.5 1.92L7 8v3Zm2.99.5L14.5 8H13V5h-2v3H9.5Z">
+</path>
+</svg>
+</span>
+example.md
+</label>
+</div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight language-yaml">
+<pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nn">---</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="hll"><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Your document title</span>
+</span></span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="hll"><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A short description of document content that encourage to read it</span>
+</span></span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="hll"><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/some/url/to/an/image.jpg</span>
+</span></span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nn">---</span>
+</span></code></pre>
+</div>
+</div>
+</div>
+
+</div>
+<div class="admonition warning">
+<p class="admonition-title">
+Warning
+</p>
+<p>
+If any of the required keys is missing, social card will not be included in a web page.
+</p>
+</div>
+<h3 id="title">
+Title
+<a href="#title" class="headerlink" title="Anchor link to this section for reference">
+¶
+</a>
+</h3>
+<p>
+As mentioned above,
+<code>
+title
+</code>
+is required to be set, so it's passed to social card and can be seen. Usually, the title is quite short and usually can also be used to identify from which page it came from. It's useful especially, when your page didn't have a logo, that is added to the image that is used
+<code>
+image
+</code>
+.
+</p>
+<p>
+There are 3 possibilities to set up title with site name:
+</p>
+<div class="tabbed-alternate tabbed-set" data-tabs="2:3">
+<input type="radio" id="site-name-before-title" name="__tabbed_2">
+<input type="radio" id="title-only" name="__tabbed_2">
+<input type="radio" id="site-name-after-title-default" name="__tabbed_2" checked>
+<div class="tabbed-labels">
+<label for="site-name-before-title">
+<span class="twemoji">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z">
+</path>
+</svg>
+</span>
+Site name before title
+</label>
+<label for="title-only">
+Title only
+</label>
+<label for="site-name-after-title-default">
+<span class="twemoji">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z">
+</path>
+</svg>
+</span>
+Site name after title (default)
+</label>
+</div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>
+Let's consider this set up:
+</p>
+<div class="highlight language-yaml">
+<span class="filename">
+mkdocs.yml
+</span>
+<pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Site name</span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pub-social</span><span class="p">:</span>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">site_name_in_title</span><span class="p">:</span>
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">before</span>
+</span></code></pre>
+</div>
+<div class="highlight language-yaml">
+<span class="filename">
+document.md
+</span>
+<pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nn">---</span>
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="hll"><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Document title</span>
+</span></span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="nn">---</span>
+</span></code></pre>
+</div>
+<p>
+This will produce the following social card title:
+</p>
+<div class="highlight language-markdown">
+<pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="hll">Site name - Document title
+</span></span></code></pre>
+</div>
+</div>
+<div class="tabbed-block">
+<p>
+Let's consider this set up:
+</p>
+<div class="highlight language-yaml">
+<span class="filename">
+mkdocs.yml
+</span>
+<pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Site name</span>
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pub-social</span><span class="p">:</span>
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">site_name_in_title</span><span class="p">:</span>
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+</span></code></pre>
+</div>
+<div class="highlight language-yaml">
+<span class="filename">
+document.md
+</span>
+<pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nn">---</span>
+</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="hll"><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Document title</span>
+</span></span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="nn">---</span>
+</span></code></pre>
+</div>
+<div class="highlight language-markdown">
+<pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="hll">Document title
+</span></span></code></pre>
+</div>
+</div>
+<div class="tabbed-block">
+<p>
+Let's consider this set up:
+</p>
+<div class="highlight language-yaml">
+<span class="filename">
+mkdocs.yml
+</span>
+<pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Site name</span>
+</span><span id="__span-7-2"><a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-7-4"><a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pub-social</span><span class="p">:</span>
+</span><span id="__span-7-5"><a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">site_name_in_title</span><span class="p">:</span>
+</span><span id="__span-7-6"><a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">after</span>
+</span></code></pre>
+</div>
+<div class="highlight language-yaml">
+<span class="filename">
+document.md
+</span>
+<pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nn">---</span>
+</span><span id="__span-8-2"><a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="hll"><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Document title</span>
+</span></span><span id="__span-8-3"><a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="nn">---</span>
+</span></code></pre>
+</div>
+<p>
+This will produce the following social card title:
+</p>
+<div class="highlight language-markdown">
+<pre><span></span><code><span id="__span-9-1"><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="hll">Document title - Site name
+</span></span></code></pre>
+</div>
+</div>
+</div>
+
+
+
+</div>
+<p>
+More setting can be found
+<a href="#site-name-in-title">
+here
+</a>
+.
+</p>
+<h2 id="configuration">
+Configuration
+<a href="#configuration" class="headerlink" title="Anchor link to this section for reference">
+¶
+</a>
+</h2>
+<p>
+To enable the built-in social cards plugin, the following lines have to be added to
+<code>
+mkdocs.yml
+</code>
+file:
+</p>
+<div class="tabbed-alternate tabbed-set" data-tabs="3:1">
+<input type="radio" id="mkdocsyml" name="__tabbed_3" checked>
+<div class="tabbed-labels">
+<label for="mkdocsyml">
+<span class="twemoji">
+<svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 14.25 15h-9a.75.75 0 0 1 0-1.5h9a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 10 4.25V1.5H5.75a.25.25 0 0 0-.25.25v2.5a.75.75 0 0 1-1.5 0Zm1.72 4.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.47-1.47-1.47-1.47a.75.75 0 0 1 0-1.06ZM3.28 7.78 1.81 9.25l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Zm8.22-6.218V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z">
+</path>
+</svg>
+</span>
+mkdocs.yml
+</label>
+</div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight language-yaml">
+<pre><span></span><code><span id="__span-10-1"><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-10-2"><a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="hll"><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pub-social</span>
+</span></span></code></pre>
+</div>
+</div>
+</div>
+
+</div>
+<h3 id="open-graph-cards">
+Open Graph cards
+<a href="#open-graph-cards" class="headerlink" title="Anchor link to this section for reference">
+¶
+</a>
+</h3>
+<div class="tabbed-alternate tabbed-set" data-tabs="4:1">
+<input type="radio" id="mkdocsyml_1" name="__tabbed_4" checked>
+<div class="tabbed-labels">
+<label for="mkdocsyml_1">
+<span class="twemoji">
+<svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 14.25 15h-9a.75.75 0 0 1 0-1.5h9a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 10 4.25V1.5H5.75a.25.25 0 0 0-.25.25v2.5a.75.75 0 0 1-1.5 0Zm1.72 4.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.47-1.47-1.47-1.47a.75.75 0 0 1 0-1.06ZM3.28 7.78 1.81 9.25l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Zm8.22-6.218V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z">
+</path>
+</svg>
+</span>
+mkdocs.yml
+</label>
+</div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight language-yaml">
+<pre><span></span><code><span id="__span-11-1"><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-11-2"><a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pub-social</span><span class="p">:</span>
+</span><span id="__span-11-3"><a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="hll"><span class="w">      </span><span class="nt">og</span><span class="p">:</span>
+</span></span><span id="__span-11-4"><a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="hll"><span class="w">        </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span></span><span id="__span-11-5"><a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="hll"><span class="w">        </span><span class="nt">locale</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">en_us</span>
+</span></span></code></pre>
+</div>
+</div>
+</div>
+
+</div>
+<details class="settings">
+<summary>
+<a href="#+social.og.enable" id="+social.og.enable">
+enabled
+</a>
+</summary>
+<p>
+This option gives you an ability to enable or disable an Open Graph cards.
+</p>
+</details>
+<details class="settings">
+<summary>
+<a href="#+social.og.locale" id="+social.og.locale">
+locale
+</a>
+</summary>
+<p>
+This option gives you an ability to set a locale of an Open Graph cards. There is a limited set of
+<a href="https://developer.yoast.com/features/opengraph/api/changing-og-locale-output/">
+possible values
+</a>
+.
+</p>
+</details>
+<h3 id="twitter-cards">
+Twitter cards
+<a href="#twitter-cards" class="headerlink" title="Anchor link to this section for reference">
+¶
+</a>
+</h3>
+<div class="tabbed-alternate tabbed-set" data-tabs="5:1">
+<input type="radio" id="mkdocsyml_2" name="__tabbed_5" checked>
+<div class="tabbed-labels">
+<label for="mkdocsyml_2">
+<span class="twemoji">
+<svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 14.25 15h-9a.75.75 0 0 1 0-1.5h9a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 10 4.25V1.5H5.75a.25.25 0 0 0-.25.25v2.5a.75.75 0 0 1-1.5 0Zm1.72 4.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.47-1.47-1.47-1.47a.75.75 0 0 1 0-1.06ZM3.28 7.78 1.81 9.25l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Zm8.22-6.218V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z">
+</path>
+</svg>
+</span>
+mkdocs.yml
+</label>
+</div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight language-yaml">
+<pre><span></span><code><span id="__span-12-1"><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-12-2"><a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pub-social</span><span class="p">:</span>
+</span><span id="__span-12-3"><a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="hll"><span class="w">      </span><span class="nt">twitter</span><span class="p">:</span>
+</span></span><span id="__span-12-4"><a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="hll"><span class="w">        </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span></span><span id="__span-12-5"><a href="#__codelineno-12-5" id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="hll"><span class="w">        </span><span class="nt">website</span><span class="p">:</span><span class="w"> </span><span class="err">@</span><span class="l l-Scalar l-Scalar-Plain">website</span>
+</span></span><span id="__span-12-6"><a href="#__codelineno-12-6" id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="hll"><span class="w">        </span><span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="err">@</span><span class="l l-Scalar l-Scalar-Plain">author</span>
+</span></span></code></pre>
+</div>
+</div>
+</div>
+
+</div>
+<details class="settings">
+<summary>
+<a href="#+social.twitter.enable" id="+social.twitter.enable">
+enabled
+</a>
+</summary>
+<p>
+This option gives you an ability to enable or disable a Twitter Cards.
+</p>
+</details>
+<details class="settings">
+<summary>
+<a href="#+social.twitter.website" id="+social.twitter.website">
+website
+</a>
+</summary>
+<p>
+This option gives you an ability to add a Twitter
+<a href="https://business.twitter.com/en/basics/create-a-twitter-business-profile.html">
+website account
+</a>
+name.
+</p>
+</details>
+<details class="settings">
+<summary>
+<a href="#+social.twitter.author" id="+social.twitter.author">
+author
+</a>
+</summary>
+<p>
+This option gives you an ability to add a Twitter
+<a href="https://help.twitter.com/en/using-twitter/create-twitter-account">
+author account
+</a>
+name.
+</p>
+</details>
+<h3 id="metadata-keys-names">
+Metadata keys names
+<a href="#metadata-keys-names" class="headerlink" title="Anchor link to this section for reference">
+¶
+</a>
+</h3>
+<p>
+You can change a name of the keys used to store metadata used to create social cards.
+</p>
+<div class="tabbed-alternate tabbed-set" data-tabs="6:1">
+<input type="radio" id="mkdocsyml_3" name="__tabbed_6" checked>
+<div class="tabbed-labels">
+<label for="mkdocsyml_3">
+<span class="twemoji">
+<svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 14.25 15h-9a.75.75 0 0 1 0-1.5h9a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 10 4.25V1.5H5.75a.25.25 0 0 0-.25.25v2.5a.75.75 0 0 1-1.5 0Zm1.72 4.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.47-1.47-1.47-1.47a.75.75 0 0 1 0-1.06ZM3.28 7.78 1.81 9.25l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Zm8.22-6.218V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z">
+</path>
+</svg>
+</span>
+mkdocs.yml
+</label>
+</div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight language-yaml">
+<pre><span></span><code><span id="__span-13-1"><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-13-2"><a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pub-social</span><span class="p">:</span>
+</span><span id="__span-13-3"><a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="hll"><span class="w">      </span><span class="nt">meta_keys</span><span class="p">:</span>
+</span></span><span id="__span-13-4"><a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="hll"><span class="w">         </span><span class="nt">title_key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">title</span>
+</span></span><span id="__span-13-5"><a href="#__codelineno-13-5" id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="hll"><span class="w">         </span><span class="nt">description_key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description</span>
+</span></span><span id="__span-13-6"><a href="#__codelineno-13-6" id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="hll"><span class="w">         </span><span class="nt">image_key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">image</span>
+</span></span></code></pre>
+</div>
+</div>
+</div>
+
+</div>
+<details class="settings">
+<summary>
+<a href="#+social.meta_keys.title_key" id="+social.meta_keys.title_key">
+title_key
+</a>
+</summary>
+<p>
+This option gives you an ability to change a metadata title key used to create a social card.
+</p>
+</details>
+<details class="settings">
+<summary>
+<a href="#+social.meta_keys.description_key" id="+social.meta_keys.description_key">
+description_key
+</a>
+</summary>
+<p>
+This option gives you an ability to change a metadata description key used to create a social card.
+</p>
+</details>
+<details class="settings">
+<summary>
+<a href="#+social.meta_keys.image_key" id="+social.meta_keys.image_key">
+image_key
+</a>
+</summary>
+<p>
+This option gives you an ability to change a metadata image key used to create a social card.
+</p>
+</details>
+<h3 id="site-name-in-title">
+Site name in title
+<a href="#site-name-in-title" class="headerlink" title="Anchor link to this section for reference">
+¶
+</a>
+</h3>
+<div class="tabbed-alternate tabbed-set" data-tabs="7:1">
+<input type="radio" id="mkdocsyml_4" name="__tabbed_7" checked>
+<div class="tabbed-labels">
+<label for="mkdocsyml_4">
+<span class="twemoji">
+<svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 14.25 15h-9a.75.75 0 0 1 0-1.5h9a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 10 4.25V1.5H5.75a.25.25 0 0 0-.25.25v2.5a.75.75 0 0 1-1.5 0Zm1.72 4.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.47-1.47-1.47-1.47a.75.75 0 0 1 0-1.06ZM3.28 7.78 1.81 9.25l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Zm8.22-6.218V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z">
+</path>
+</svg>
+</span>
+mkdocs.yml
+</label>
+</div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight language-yaml">
+<pre><span></span><code><span id="__span-14-1"><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-14-2"><a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pub-social</span><span class="p">:</span>
+</span><span id="__span-14-3"><a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="hll"><span class="w">      </span><span class="nt">site_name_in_title</span><span class="p">:</span>
+</span></span><span id="__span-14-4"><a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="hll"><span class="w">        </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">after</span>
+</span></span><span id="__span-14-5"><a href="#__codelineno-14-5" id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="hll"><span class="w">        </span><span class="nt">delimiter</span><span class="p">:</span><span class="w"> </span><span class="s">"</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">"</span>
+</span></span></code></pre>
+</div>
+</div>
+</div>
+
+</div>
+<details class="settings">
+<summary>
+<a href="#+social.site_name_in_title.location" id="+social.site_name_in_title.location">
+location
+</a>
+</summary>
+<p>
+This option gives you an ability to control where site name should be placed in social card title.
+</p>
+</details>
+<details class="settings">
+<summary>
+<a href="#+social.site_name_in_title.delimiter" id="+social.site_name_in_title.delimiter">
+delimiter
+</a>
+</summary>
+<p>
+This option gives you an ability to change a delimiter placed between name and title.
+</p>
+</details>
+<hr>
+<p class="obsidian_backlink_title">
+Backlinks:
+</p>
+<div class="obsidian_backlink">
+<details class="backlink">
+<summary>
+v0.5.0 - 2023-04-04
+</summary>
+<p>
+</p><p class="obsidian_backlink">
+For more details about this release, read more below or jump directly to
+<a href="https://mkdocs-publisher.github.io/blog/v050/#c927d5a2a6c90d83b7e3f1156eba3ced">
+pub-social
+</a>
+plugin documentation.
+</p>
+<p></p>
+</details>
+<details class="backlink">
+<summary>
+v1.4.0 - 2024-07-17
+</summary>
+<p>
+</p><p class="obsidian_backlink">
+There is also a small update inside the social plugin for how titles are created
+<a href="https://mkdocs-publisher.github.io/blog/v140/#c927d5a2a6c90d83b7e3f1156eba3ced">
+titles are created
+</a>
+in social cards. So far, title was just created based on
+<code>
+title
+</code>
+metadata, but in most cases other tools use a bit different approach. They create a title by joining title and site name, so it helps a bit a SEO stuff and site recognition (especially when there is no logo or site name in the image). From now one, this is a default behavior, but you have control over it ../03_setup/03_seo_and_sharing/01_setting-up-social-cards.md.
+</p>
+<hr>
+<p class="obsidian_backlink">
+There is also a small update inside the social plugin for how titles are created ../03_setup/03_seo_and_sharing/01_setting-up-social-cards.mdin social cards. So far, title was just created based on
+<code>
+title
+</code>
+metadata, but in most cases other tools use a bit different approach. They create a title by joining title and site name, so it helps a bit a SEO stuff and site recognition (especially when there is no logo or site name in the image). From now one, this is a default behavior, but you have control over it
+<a href="https://mkdocs-publisher.github.io/blog/v140/#c927d5a2a6c90d83b7e3f1156eba3ced">
+have control over it
+</a>
+.
+</p>
+<p></p>
+</details>
+</div>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-icon md-top" type="button" data-md-component="top" hidden>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z">
+</path>
+</svg>
+Back to top
+</button>
+</main>
+<footer class="md-footer">
+<nav class="md-grid md-footer__inner" aria-label="Footer">
+<a href="../../general/pub-obsidian/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Setting up Obsidian">
+<div class="md-icon md-footer__button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z">
+</path>
+</svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+Previous
+</span>
+<div class="md-ellipsis">
+Setting up Obsidian
+</div>
+</div>
+</a>
+<a href="../pub-minifier/" class="md-footer__link md-footer__link--next" aria-label="Next: Setting up minifier">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+Next
+</span>
+<div class="md-ellipsis">
+Setting up minifier
+</div>
+</div>
+<div class="md-icon md-footer__button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z">
+</path>
+</svg>
+</div>
+</a>
+</nav>
+<div class="md-typeset md-footer-meta">
+<div class="md-grid md-footer-meta__inner">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+© 2023-2024 Maciej 'maQ' Kusz
+</div>
+Made with
+<a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+Material for MkDocs
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-typeset md-dialog__inner">
+</div>
+</div>
+<div class="md-progress" data-md-component="progress" role="progressbar">
+</div>
+<script id="__config" type="application/json">
+{"base": "../../..", "features": ["navigation.tabs", "navigation.footer", "navigation.tracking", "navigation.top", "navigation.sections", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.action.view", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}
+</script>
+<script src="../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+<script src="../../../assets/javascripts/mathjax.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+</html>
