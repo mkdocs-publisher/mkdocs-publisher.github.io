@@ -7,7 +7,7 @@ copyright: >
 
 repo_name: mkdocs-publisher
 repo_url: https://github.com/mkusz/mkdocs-publisher/
-edit_uri: https://mkdocs-publisher.github.io/edit/main/mkdocs_publisher_docs/
+edit_uri: https://github.com/mkdocs-publisher/mkdocs-publisher.github.io/edit/main/mkdocs_publisher_docs/
 
 docs_dir: mkdocs_publisher_docs
 site_dir: docs
