@@ -1,0 +1,23 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: no-commit-to-branch
+      - id: check-shebang-scripts-are-executable
+      - id: check-symlinks
+      - id: detect-private-key
+      - id: end-of-file-fixer
+        exclude: ^(docs|mkdocs_publisher_docs/.obsidian)/
+      - id: trailing-whitespace
+        exclude: ^(docs|mkdocs_publisher_docs/.obsidian)/
+      - id: check-json
+      - id: check-toml
+
+  - repo: local
+    hooks:
+      - id: lint-yaml
+        name: lint YAML files
+        description: Format and check YAML files.
+        entry: poetry run yamllint
+        language: system
+        files: \.(yml|yaml)$
