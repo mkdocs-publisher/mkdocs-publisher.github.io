@@ -23,7 +23,7 @@ jobs:
           architecture: 'x64'
           cache: 'poetry'
       - name: Install Python dependencies
-        run: poetry install -n --no-root
+        run: poetry install -n
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
