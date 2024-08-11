@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
@@ -10,9 +11,7 @@
 <link href="../../development/pub-debugger/" rel="next">
 <link href="../../../publisher_icon.png" rel="icon">
 <meta content="mkdocs-1.6.0, mkdocs-material-9.5.31" name="generator">
-<title>
-Setting up minifier - Publisher for MkDocs
-</title>
+<title>Setting up minifier - Publisher for MkDocs</title>
 <link href="../../../assets/stylesheets/main.3cba04c6.min.css" rel="stylesheet">
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet">
 <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="">
@@ -24,21 +23,11 @@ Setting up minifier - Publisher for MkDocs
 <link href="../../../assets/stylesheets/obsidian.min.css" rel="stylesheet">
 <link href="../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet">
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<meta content="article" property="og:type">
-<meta content="Setting up minifier - Publisher for MkDocs" property="og:title">
-<meta content="Setting up Publisher for MkDocs minifier plugin for page size optimization" property="og:description">
-<meta content="Publisher for MkDocs" property="og:site_name">
-<meta content="en_US" property="og:locale">
-<meta content="https://mkdocs-publisher.github.io/setup/seo-and-sharing/pub-minifier/" property="og:url">
-<meta content="summary" property="twitter:card">
-<meta content="Setting up minifier - Publisher for MkDocs" property="twitter:title">
-<meta content="Setting up Publisher for MkDocs minifier plugin for page size optimization" property="twitter:description">
-</head>
+<meta content="article" property="og:type"><meta content="Setting up minifier - Publisher for MkDocs" property="og:title"><meta content="Setting up Publisher for MkDocs minifier plugin for page size optimization" property="og:description"><meta content="Publisher for MkDocs" property="og:site_name"><meta content="en_US" property="og:locale"><meta content="https://mkdocs-publisher.github.io/setup/seo-and-sharing/pub-minifier/" property="og:url"><meta content="summary" property="twitter:card"><meta content="Setting up minifier - Publisher for MkDocs" property="twitter:title"><meta content="Setting up Publisher for MkDocs minifier plugin for page size optimization" property="twitter:description"></head>
 <body data-md-color-accent="orange" data-md-color-primary="orange" data-md-color-scheme="default" dir="ltr">
 <input type="checkbox" id="__drawer" class="md-toggle" autocomplete="off" data-md-toggle="drawer">
 <input type="checkbox" id="__search" class="md-toggle" autocomplete="off" data-md-toggle="search">
-<label for="__drawer" class="md-overlay">
-</label>
+<label for="__drawer" class="md-overlay"></label>
 <div data-md-component="skip">
 <a href="#setting-up-a-minifier-plugin" class="md-skip">
 Skip to content
@@ -48,16 +37,9 @@ Skip to content
 <aside class="md-banner">
 <div class="md-grid md-banner__inner md-typeset">
 <div>
-Now you can become a
-<a href="https://github.com/sponsors/mkdocs-publisher">
-sponsor
-</a>
-of this project.
+Now you can become a<a href="https://github.com/sponsors/mkdocs-publisher">sponsor</a> of this project.
 <span class="twemoji heart">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z"></path></svg>
 </span>
 </div>
 </div>
@@ -69,10 +51,7 @@ of this project.
 <img alt="logo" src="../../../publisher_logo.png">
 </a>
 <label for="__drawer" class="md-icon md-header__button">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
 </label>
 <div class="md-header__title" data-md-component="header-title">
 <div class="md-header__ellipsis">
@@ -91,58 +70,35 @@ Setting up minifier
 <form class="md-header__option" data-md-component="palette">
 <input type="radio" id="__palette_0" name="__palette" aria-label="Switch to dark mode" class="md-option" data-md-color-accent="orange" data-md-color-media="" data-md-color-primary="orange" data-md-color-scheme="default">
 <label for="__palette_1" class="md-icon md-header__button" hidden title="Switch to dark mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"></path></svg>
 </label>
 <input type="radio" id="__palette_1" name="__palette" aria-label="Switch to light mode" class="md-option" data-md-color-accent="orange" data-md-color-media="" data-md-color-primary="orange" data-md-color-scheme="slate">
 <label for="__palette_0" class="md-icon md-header__button" hidden title="Switch to light mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"></path></svg>
 </label>
 </form>
 <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color)for([key,value]of("(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")),Object.entries(palette.color)))document.body.setAttribute("data-md-color-"+key,value)</script>
 <label for="__search" class="md-icon md-header__button">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
 </label>
 <div class="md-search" data-md-component="search" role="dialog">
-<label for="__search" class="md-search__overlay">
-</label>
+<label for="__search" class="md-search__overlay"></label>
 <div class="md-search__inner" role="search">
 <form class="md-search__form" name="search">
 <input type="text" name="query" aria-label="Search" class="md-search__input" autocapitalize="off" autocomplete="off" autocorrect="off" data-md-component="search-query" placeholder="Search" required spellcheck="false">
 <label for="__search" class="md-icon md-search__icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
-</path>
-</svg>
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </label>
 <nav class="md-search__options" aria-label="Search">
 <a href="javascript:void(0)" class="md-icon md-search__icon" title="Share" data-md-component="search-share" aria-label="Share" data-clipboard="" data-clipboard-text="" tabindex="-1">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
 </a>
 <button class="md-icon md-search__icon" type="reset" aria-label="Clear" tabindex="-1" title="Clear">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
 </button>
 </nav>
-<div class="md-search__suggest" data-md-component="search-suggest">
-</div>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
 </form>
 <div class="md-search__output">
 <div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
@@ -150,8 +106,7 @@ Setting up minifier
 <div class="md-search-result__meta">
 Initializing search
 </div>
-<ol class="md-search-result__list" role="presentation">
-</ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -160,11 +115,7 @@ Initializing search
 <div class="md-header__source">
 <a href="https://github.com/mkdocs-publisher/mkdocs-publisher/" class="md-source" title="Go to repository" data-md-component="source">
 <div class="md-icon md-source__icon">
-<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-<!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.-->
-<path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z">
-</path>
-</svg>
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
 <div class="md-source__repository">
 mkdocs-publisher
@@ -188,7 +139,7 @@ Setup
 </a>
 </li>
 <li class="md-tabs__item">
-<a href="../../../index-0/" class="md-tabs__link">
+<a href="../../../blog/" class="md-tabs__link">
 Blog
 </a>
 </li>
@@ -215,11 +166,7 @@ Publisher for MkDocs
 <div class="md-nav__source">
 <a href="https://github.com/mkdocs-publisher/mkdocs-publisher/" class="md-source" title="Go to repository" data-md-component="source">
 <div class="md-icon md-source__icon">
-<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-<!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.-->
-<path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z">
-</path>
-</svg>
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
 <div class="md-source__repository">
 mkdocs-publisher
@@ -240,22 +187,17 @@ Home
 <span class="md-ellipsis">
 Setup
 </span>
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 </label>
 <nav class="md-nav" data-md-level="1" aria-expanded="true" aria-labelledby="__nav_2_label">
 <label for="__nav_2" class="md-nav__title">
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 Setup
 </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a href="../../installation/" class="md-nav__link">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 6h16v10H4m16 2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2H0v2h24v-2h-4Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16v10H4m16 2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2H0v2h24v-2h-4Z"></path></svg>
 <span class="md-ellipsis">
 Installation
 </span>
@@ -267,22 +209,17 @@ Installation
 <span class="md-ellipsis">
 General
 </span>
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 </label>
 <nav class="md-nav" data-md-level="2" aria-expanded="false" aria-labelledby="__nav_2_2_label">
 <label for="__nav_2_2" class="md-nav__title">
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 General
 </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a href="../../general/pub-meta/" class="md-nav__link">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M3 3h6v4H3V3m12 7h6v4h-6v-4m0 7h6v4h-6v-4m-2-4H7v5h6v2H5V9h2v2h6v2Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 3h6v4H3V3m12 7h6v4h-6v-4m0 7h6v4h-6v-4m-2-4H7v5h6v2H5V9h2v2h6v2Z"></path></svg>
 <span class="md-ellipsis">
 Setting up meta
 </span>
@@ -290,10 +227,7 @@ Setting up meta
 </li>
 <li class="md-nav__item">
 <a href="../../general/pub-blog/" class="md-nav__link">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 7v12h15v2H4c-2 0-2-2-2-2V7h2m17.3-4H7.7C6.76 3 6 3.7 6 4.55v10.9c0 .86.76 1.55 1.7 1.55h13.6c.94 0 1.7-.69 1.7-1.55V4.55C23 3.7 22.24 3 21.3 3M8 5h5v6H8V5m13 10H8v-2h13v2m0-4h-6V9h6v2m0-4h-6V5h6v2Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 7v12h15v2H4c-2 0-2-2-2-2V7h2m17.3-4H7.7C6.76 3 6 3.7 6 4.55v10.9c0 .86.76 1.55 1.7 1.55h13.6c.94 0 1.7-.69 1.7-1.55V4.55C23 3.7 22.24 3 21.3 3M8 5h5v6H8V5m13 10H8v-2h13v2m0-4h-6V9h6v2m0-4h-6V5h6v2Z"></path></svg>
 <span class="md-ellipsis">
 Setting up a blog
 </span>
@@ -301,11 +235,9 @@ Setting up a blog
 </li>
 <li class="md-nav__item">
 <a href="../../general/pub-obsidian/" class="md-nav__link">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path 
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path 
 d="M19.355 18.538a68.967 68.959 0 0 0 1.858-2.954.81.81 0 0 0-.062-.9c-.516-.685-1.504-2.075-2.042-3.362-.553-1.321-.636-3.375-.64-4.377a1.707 1.707 0 0 0-.358-1.05l-3.198-4.064a3.744 3.744 0 0 1-.076.543c-.106.503-.307 1.004-.536 1.5-.134.29-.29.6-.446.914l-.31.626c-.516 1.068-.997 2.227-1.132 3.59-.124 1.26.046 2.73.815 4.481.128.011.257.025.386.044a6.363 6.363 0 0 1 3.326 1.505c.916.79 1.744 1.922 2.415 3.5zM8.199 22.569c.073.012.146.02.22.02.78.024 2.095.092 3.16.29.87.16 2.593.64 4.01 1.055 1.083.316 2.198-.548 2.355-1.664.114-.814.33-1.735.725-2.58l-.01.005c-.67-1.87-1.522-3.078-2.416-3.849a5.295 5.295 0 0 0-2.778-1.257c-1.54-.216-2.952.19-3.84.45.532 2.218.368 4.829-1.425 7.531zM5.533 9.938c-.023.1-.056.197-.098.29L2.82 16.059a1.602 1.602 0 0 0 .313 1.772l4.116 4.24c2.103-3.101 1.796-6.02.836-8.3-.728-1.73-1.832-3.081-2.55-3.831zM9.32 14.01c.615-.183 1.606-.465 2.745-.534-.683-1.725-.848-3.233-.716-4.577.154-1.552.7-2.847 1.235-3.95.113-.235.223-.454.328-.664.149-.297.288-.577.419-.86.217-.47.379-.885.46-1.27.08-.38.08-.72-.014-1.043-.095-.325-.297-.675-.68-1.06a1.6 1.6 0 0 0-1.475.36l-4.95 4.452a1.602 1.602 0 0 0-.513.952l-.427 2.83c.672.59 2.328 2.316 3.335 4.711.09.21.175.43.253.653z">
-</path>
-</svg>
+</path></svg>
 <span class="md-ellipsis">
 Setting up Obsidian
 </span>
@@ -320,22 +252,17 @@ Setting up Obsidian
 <span class="md-ellipsis">
 SEO &amp; Sharing
 </span>
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 </label>
 <nav class="md-nav" data-md-level="2" aria-expanded="true" aria-labelledby="__nav_2_3_label">
 <label for="__nav_2_3" class="md-nav__title">
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 SEO &amp; Sharing
 </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a href="../pub-social/" class="md-nav__link">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="m21 12-7-7v4C7 10 4 15 3 20c2.5-3.5 6-5.1 11-5.1V19l7-7Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m21 12-7-7v4C7 10 4 15 3 20c2.5-3.5 6-5.1 11-5.1V19l7-7Z"></path></svg>
 <span class="md-ellipsis">
 Setting up social cards
 </span>
@@ -344,29 +271,21 @@ Setting up social cards
 <li class="md-nav__item md-nav__item--active">
 <input type="checkbox" id="__toc" class="md-toggle md-nav__toggle">
 <label for="__toc" class="md-nav__link md-nav__link--active">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M16.5 5.5a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2 2 2 0 0 0 2 2m-3.6 13.9 1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3A7.298 7.298 0 0 0 22 13v-2c-1.76.03-3.4-.89-4.3-2.4l-1-1.6c-.36-.6-1-1-1.7-1-.3 0-.5.1-.8.1L9 8.3V13h2V9.6l1.8-.7-1.6 8.1-4.9-1-.4 2 7 1.4M4 9a1 1 0 0 1-1-1 1 1 0 0 1 1-1h3v2H4m1-4a1 1 0 0 1-1-1 1 1 0 0 1 1-1h5v2H5m-2 8a1 1 0 0 1-1-1 1 1 0 0 1 1-1h4v2H3Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 5.5a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2 2 2 0 0 0 2 2m-3.6 13.9 1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3A7.298 7.298 0 0 0 22 13v-2c-1.76.03-3.4-.89-4.3-2.4l-1-1.6c-.36-.6-1-1-1.7-1-.3 0-.5.1-.8.1L9 8.3V13h2V9.6l1.8-.7-1.6 8.1-4.9-1-.4 2 7 1.4M4 9a1 1 0 0 1-1-1 1 1 0 0 1 1-1h3v2H4m1-4a1 1 0 0 1-1-1 1 1 0 0 1 1-1h5v2H5m-2 8a1 1 0 0 1-1-1 1 1 0 0 1 1-1h4v2H3Z"></path></svg>
 <span class="md-ellipsis">
 Setting up minifier
 </span>
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 </label>
 <a href="./" class="md-nav__link md-nav__link--active">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M16.5 5.5a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2 2 2 0 0 0 2 2m-3.6 13.9 1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3A7.298 7.298 0 0 0 22 13v-2c-1.76.03-3.4-.89-4.3-2.4l-1-1.6c-.36-.6-1-1-1.7-1-.3 0-.5.1-.8.1L9 8.3V13h2V9.6l1.8-.7-1.6 8.1-4.9-1-.4 2 7 1.4M4 9a1 1 0 0 1-1-1 1 1 0 0 1 1-1h3v2H4m1-4a1 1 0 0 1-1-1 1 1 0 0 1 1-1h5v2H5m-2 8a1 1 0 0 1-1-1 1 1 0 0 1 1-1h4v2H3Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 5.5a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2 2 2 0 0 0 2 2m-3.6 13.9 1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3A7.298 7.298 0 0 0 22 13v-2c-1.76.03-3.4-.89-4.3-2.4l-1-1.6c-.36-.6-1-1-1.7-1-.3 0-.5.1-.8.1L9 8.3V13h2V9.6l1.8-.7-1.6 8.1-4.9-1-.4 2 7 1.4M4 9a1 1 0 0 1-1-1 1 1 0 0 1 1-1h3v2H4m1-4a1 1 0 0 1-1-1 1 1 0 0 1 1-1h5v2H5m-2 8a1 1 0 0 1-1-1 1 1 0 0 1 1-1h4v2H3Z"></path></svg>
 <span class="md-ellipsis">
 Setting up minifier
 </span>
 </a>
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
 <label for="__toc" class="md-nav__title">
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 Table of contents
 </label>
 <ul class="md-nav__list" data-md-scrollfix="" data-md-component="toc">
@@ -456,22 +375,17 @@ JS optimization
 <span class="md-ellipsis">
 Development
 </span>
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 </label>
 <nav class="md-nav" data-md-level="2" aria-expanded="false" aria-labelledby="__nav_2_4_label">
 <label for="__nav_2_4" class="md-nav__title">
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 Development
 </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a href="../../development/pub-debugger/" class="md-nav__link">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M11 13h2v1h-2v-1m10-8v6c0 5.5-3.8 10.7-9 12-5.2-1.3-9-6.5-9-12V5l9-4 9 4m-4 5h-2.2c-.2-.6-.6-1.1-1.1-1.5l1.2-1.2-.7-.7L12.8 8H12c-.2 0-.5 0-.7.1L9.9 6.6l-.8.8 1.2 1.2c-.5.3-.9.8-1.1 1.4H7v1h2v1H7v1h2v1H7v1h2.2c.4 1.2 1.5 2 2.8 2s2.4-.8 2.8-2H17v-1h-2v-1h2v-1h-2v-1h2v-1m-6 2h2v-1h-2v1Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11 13h2v1h-2v-1m10-8v6c0 5.5-3.8 10.7-9 12-5.2-1.3-9-6.5-9-12V5l9-4 9 4m-4 5h-2.2c-.2-.6-.6-1.1-1.1-1.5l1.2-1.2-.7-.7L12.8 8H12c-.2 0-.5 0-.7.1L9.9 6.6l-.8.8 1.2 1.2c-.5.3-.9.8-1.1 1.4H7v1h2v1H7v1h2v1H7v1h2.2c.4 1.2 1.5 2 2.8 2s2.4-.8 2.8-2H17v-1h-2v-1h2v-1h-2v-1h2v-1m-6 2h2v-1h-2v1Z"></path></svg>
 <span class="md-ellipsis">
 Setting up debugger
 </span>
@@ -485,40 +399,33 @@ Setting up debugger
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input type="checkbox" id="__nav_3" class="md-toggle md-nav__toggle">
-<label for="__nav_3" class="md-nav__link" id="__nav_3_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a href="../../../blog/" class="md-nav__link">
 <span class="md-ellipsis">
 Blog
 </span>
-<span class="md-icon md-nav__icon">
-</span>
+</a>
+<label for="__nav_3" class="md-nav__link" id="__nav_3_label" tabindex="0">
+<span class="md-icon md-nav__icon"></span>
 </label>
+</div>
 <nav class="md-nav" data-md-level="1" aria-expanded="false" aria-labelledby="__nav_3_label">
 <label for="__nav_3" class="md-nav__title">
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 Blog
 </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a href="../../../index-0/" class="md-nav__link">
-<span class="md-ellipsis">
-index-0
-</span>
-</a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
 <input type="checkbox" id="__nav_3_2" class="md-toggle md-nav__toggle">
 <label for="__nav_3_2" class="md-nav__link" id="__nav_3_2_label" tabindex="0">
 <span class="md-ellipsis">
 Archive
 </span>
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 </label>
 <nav class="md-nav" data-md-level="2" aria-expanded="false" aria-labelledby="__nav_3_2_label">
 <label for="__nav_3_2" class="md-nav__title">
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 Archive
 </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -545,13 +452,11 @@ Archive
 <span class="md-ellipsis">
 Categories
 </span>
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 </label>
 <nav class="md-nav" data-md-level="2" aria-expanded="false" aria-labelledby="__nav_3_3_label">
 <label for="__nav_3_3" class="md-nav__title">
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 Categories
 </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -571,13 +476,11 @@ release
 <span class="md-ellipsis">
 Tags
 </span>
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 </label>
 <nav class="md-nav" data-md-level="2" aria-expanded="false" aria-labelledby="__nav_3_4_label">
 <label for="__nav_3_4" class="md-nav__title">
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 Tags
 </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -607,22 +510,17 @@ v1.x
 <span class="md-ellipsis">
 Development
 </span>
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 </label>
 <nav class="md-nav" data-md-level="1" aria-expanded="false" aria-labelledby="__nav_4_label">
 <label for="__nav_4" class="md-nav__title">
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 Development
 </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a href="../../../development/changelog/" class="md-nav__link">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="m14 3-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7v2l4-3-4-3v2H4V3h10m7 7v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-2h2v2h11v-9h-5V7H8v6H6V7a2 2 0 0 1 2-2h8l5 5Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m14 3-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7v2l4-3-4-3v2H4V3h10m7 7v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-2h2v2h11v-9h-5V7H8v6H6V7a2 2 0 0 1 2-2h8l5 5Z"></path></svg>
 <span class="md-ellipsis">
 Changelog
 </span>
@@ -630,10 +528,7 @@ Changelog
 </li>
 <li class="md-nav__item">
 <a href="../../../development/development/" class="md-nav__link">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M19 10h-2V8h2m0 5h-2v-2h2m-3-1h-2V8h2m0 5h-2v-2h2m0 6H8v-2h8m-9-5H5V8h2m0 5H5v-2h2m1 0h2v2H8m0-5h2v2H8m3 1h2v2h-2m0-5h2v2h-2m9-5H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 10h-2V8h2m0 5h-2v-2h2m-3-1h-2V8h2m0 5h-2v-2h2m0 6H8v-2h8m-9-5H5V8h2m0 5H5v-2h2m1 0h2v2H8m0-5h2v2H8m3 1h2v2h-2m0-5h2v2h-2m9-5H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Z"></path></svg>
 <span class="md-ellipsis">
 Development
 </span>
@@ -641,10 +536,8 @@ Development
 </li>
 <li class="md-nav__item">
 <a href="../../../development/versioning/" class="md-nav__link">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.003 7.754a.75.75 0 0 1 .75-.75h5.232a.75.75 0 0 1 .53 1.28l-2.776 2.777c.55.097 1.057.253 1.492.483.905.477 1.504 1.284 1.504 2.418 0 .966-.471 1.75-1.172 2.27-.687.511-1.587.77-2.521.77-1.367 0-2.274-.528-2.667-.756a.75.75 0 0 1 .755-1.297c.331.193.953.553 1.912.553.673 0 1.243-.188 1.627-.473.37-.275.566-.635.566-1.067 0-.5-.219-.836-.703-1.091-.538-.284-1.375-.443-2.471-.443a.75.75 0 0 1-.53-1.28l2.643-2.644h-3.421a.75.75 0 0 1-.75-.75ZM7.88 15.215a1.4 1.4 0 0 0-1.446.83.75.75 0 0 1-1.37-.61 2.899 2.899 0 0 1 2.986-1.71c.589.06 1.139.323 1.557.743.434.446.685 1.058.685 1.778 0 1.641-1.254 2.437-2.12 2.986-.538.341-1.18.694-1.495 1.273H9.75a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75c0-1.799 1.337-2.63 2.243-3.21 1.032-.659 1.55-1.031 1.55-1.8 0-.355-.116-.584-.26-.732a1.071 1.071 0 0 0-.652-.298Zm.234-13.121a.75.75 0 0 1 .386.656V9h1.252a.75.75 0 0 1 0 1.5H5.75a.75.75 0 0 1 0-1.5H7V4.103l-.853.533a.749.749 0 1 1-.795-1.272l2-1.25a.749.749 0 0 1 .762-.02Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path 
+d="M13.003 7.754a.75.75 0 0 1 .75-.75h5.232a.75.75 0 0 1 .53 1.28l-2.776 2.777c.55.097 1.057.253 1.492.483.905.477 1.504 1.284 1.504 2.418 0 .966-.471 1.75-1.172 2.27-.687.511-1.587.77-2.521.77-1.367 0-2.274-.528-2.667-.756a.75.75 0 0 1 .755-1.297c.331.193.953.553 1.912.553.673 0 1.243-.188 1.627-.473.37-.275.566-.635.566-1.067 0-.5-.219-.836-.703-1.091-.538-.284-1.375-.443-2.471-.443a.75.75 0 0 1-.53-1.28l2.643-2.644h-3.421a.75.75 0 0 1-.75-.75ZM7.88 15.215a1.4 1.4 0 0 0-1.446.83.75.75 0 0 1-1.37-.61 2.899 2.899 0 0 1 2.986-1.71c.589.06 1.139.323 1.557.743.434.446.685 1.058.685 1.778 0 1.641-1.254 2.437-2.12 2.986-.538.341-1.18.694-1.495 1.273H9.75a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75c0-1.799 1.337-2.63 2.243-3.21 1.032-.659 1.55-1.031 1.55-1.8 0-.355-.116-.584-.26-.732a1.071 1.071 0 0 0-.652-.298Zm.234-13.121a.75.75 0 0 1 .386.656V9h1.252a.75.75 0 0 1 0 1.5H5.75a.75.75 0 0 1 0-1.5H7V4.103l-.853.533a.749.749 0 1 1-.795-1.272l2-1.25a.749.749 0 0 1 .762-.02Z"></path></svg>
 <span class="md-ellipsis">
 Versioning
 </span>
@@ -656,22 +549,17 @@ Versioning
 <span class="md-ellipsis">
 Other
 </span>
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 </label>
 <nav class="md-nav" data-md-level="2" aria-expanded="false" aria-labelledby="__nav_4_4_label">
 <label for="__nav_4_4" class="md-nav__title">
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 Other
 </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a href="../../../development/other/backlog/" class="md-nav__link">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M16.5 11 13 7.5l1.4-1.4 2.1 2.1L20.7 4l1.4 1.4-5.6 5.6M11 7H2v2h9V7m10 6.4L19.6 12 17 14.6 14.4 12 13 13.4l2.6 2.6-2.6 2.6 1.4 1.4 2.6-2.6 2.6 2.6 1.4-1.4-2.6-2.6 2.6-2.6M11 15H2v2h9v-2Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 11 13 7.5l1.4-1.4 2.1 2.1L20.7 4l1.4 1.4-5.6 5.6M11 7H2v2h9V7m10 6.4L19.6 12 17 14.6 14.4 12 13 13.4l2.6 2.6-2.6 2.6 1.4 1.4 2.6-2.6 2.6 2.6 1.4-1.4-2.6-2.6 2.6-2.6M11 15H2v2h9v-2Z"></path></svg>
 <span class="md-ellipsis">
 Backlog
 </span>
@@ -693,8 +581,7 @@ Backlog
 <div class="md-sidebar__inner">
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
 <label for="__toc" class="md-nav__title">
-<span class="md-icon md-nav__icon">
-</span>
+<span class="md-icon md-nav__icon"></span>
 Table of contents
 </label>
 <ul class="md-nav__list" data-md-scrollfix="" data-md-component="toc">
@@ -780,684 +667,232 @@ JS optimization
 <div class="md-content" data-md-component="content">
 <article class="md-typeset md-content__inner">
 <a href="https://github.com/mkdocs-publisher/mkdocs-publisher.github.io/edit/main/mkdocs_publisher_docs/03_setup/03_seo_and_sharing/02_setting-up-minifier.md" class="md-icon md-content__button" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <a href="https://github.com/mkdocs-publisher/mkdocs-publisher.github.io/raw/main/mkdocs_publisher_docs/03_setup/03_seo_and_sharing/02_setting-up-minifier.md" class="md-icon md-content__button" title="View source of this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"></path></svg>
 </a>
-<h1 id="setting-up-a-minifier-plugin">
-Setting up a minifier plugin
-<a href="#setting-up-a-minifier-plugin" class="headerlink" title="Anchor link to this section for reference">
-¶
-</a>
-</h1>
-<h2 id="introduction">
-Introduction
-<a href="#introduction" class="headerlink" title="Anchor link to this section for reference">
-¶
-</a>
-</h2>
-<p>
-Even today, when most of us have quite fast internet connection, page size still matters to over feeling of fast page load and as one of the factors of SEO. For that reason, a good publishing tool, should allow optimizing image size and (less important) page code size optimization. Publisher for MkDocs has that ability, but it does not introduce new optimization algorithms, etc. It's using tools that are created by others and considered stable with a good performance, etc.
-</p>
-<h2 id="installation">
-Installation
-<a href="#installation" class="headerlink" title="Anchor link to this section for reference">
-¶
-</a>
-</h2>
-<p>
-To simplify the entire process, below is presented a single way of installation of all the tools. If you just want to use a single tool or learn more about what tool is used for what type of file, please take a look below for a
-<a href="#configuration">
-configuration
-</a>
-section where it's described.
-</p>
-<div class="tabbed-alternate tabbed-set" data-tabs="1:3">
-<input type="radio" id="macos" name="__tabbed_1" checked>
-<input type="radio" id="simple-windows-windows" name="__tabbed_1">
-<input type="radio" id="ubuntu" name="__tabbed_1">
-<div class="tabbed-labels">
-<label for="macos">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701">
-</path>
-</svg>
-</span>
-MacOS
-</label>
-<label for="simple-windows-windows">
-:simple-windows: Windows
-</label>
-<label for="ubuntu">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M17.61.455a3.41 3.41 0 0 0-3.41 3.41 3.41 3.41 0 0 0 3.41 3.41 3.41 3.41 0 0 0 3.41-3.41 3.41 3.41 0 0 0-3.41-3.41zM12.92.8C8.923.777 5.137 2.941 3.148 6.451a4.5 4.5 0 0 1 .26-.007 4.92 4.92 0 0 1 2.585.737A8.316 8.316 0 0 1 12.688 3.6 4.944 4.944 0 0 1 13.723.834 11.008 11.008 0 0 0 12.92.8zm9.226 4.994a4.915 4.915 0 0 1-1.918 2.246 8.36 8.36 0 0 1-.273 8.303 4.89 4.89 0 0 1 1.632 2.54 11.156 11.156 0 0 0 .559-13.089zM3.41 7.932A3.41 3.41 0 0 0 0 11.342a3.41 3.41 0 0 0 3.41 3.409 3.41 3.41 0 0 0 3.41-3.41 3.41 3.41 0 0 0-3.41-3.41zm2.027 7.866a4.908 4.908 0 0 1-2.915.358 11.1 11.1 0 0 0 7.991 6.698 11.234 11.234 0 0 0 2.422.249 4.879 4.879 0 0 1-.999-2.85 8.484 8.484 0 0 1-.836-.136 8.304 8.304 0 0 1-5.663-4.32zm11.405.928a3.41 3.41 0 0 0-3.41 3.41 3.41 3.41 0 0 0 3.41 3.41 3.41 3.41 0 0 0 3.41-3.41 3.41 3.41 0 0 0-3.41-3.41z">
-</path>
-</svg>
-</span>
-Ubuntu
-</label>
-</div>
+<h1 id="setting-up-a-minifier-plugin">Setting up a minifier plugin<a href="#setting-up-a-minifier-plugin" class="headerlink" title="Anchor link to this section for reference">¶</a></h1>
+<h2 id="introduction">Introduction<a href="#introduction" class="headerlink" title="Anchor link to this section for reference">¶</a></h2>
+<p>Even today, when most of us have quite fast internet connection, page size still matters to over feeling of fast page load and as one of the factors of SEO. For that reason, a good publishing tool, should allow optimizing image size and (less important) page code size optimization. Publisher for MkDocs has that ability, but it does not introduce new optimization algorithms, etc. It's using tools that are created by others and considered stable with a good performance, etc.</p>
+<h2 id="installation">Installation<a href="#installation" class="headerlink" title="Anchor link to this section for reference">¶</a></h2>
+<p>To simplify the entire process, below is presented a single way of installation of all the tools. If you just want to use a single tool or learn more about what tool is used for what type of file, please take a look below for a <a href="#configuration">configuration</a> section where it's described.</p>
+<div class="tabbed-alternate tabbed-set" data-tabs="1:3"><input type="radio" id="macos" name="__tabbed_1" checked><input type="radio" id="simple-windows-windows" name="__tabbed_1"><input type="radio" id="ubuntu" name="__tabbed_1"><div class="tabbed-labels"><label for="macos"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"></path></svg></span> MacOS</label><label for="simple-windows-windows">:simple-windows: Windows</label><label 
+for="ubuntu"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.61.455a3.41 3.41 0 0 0-3.41 3.41 3.41 3.41 0 0 0 3.41 3.41 3.41 3.41 0 0 0 3.41-3.41 3.41 3.41 0 0 0-3.41-3.41zM12.92.8C8.923.777 5.137 2.941 3.148 6.451a4.5 4.5 0 0 1 .26-.007 4.92 4.92 0 0 1 2.585.737A8.316 8.316 0 0 1 12.688 3.6 4.944 4.944 0 0 1 13.723.834 11.008 11.008 0 0 0 12.92.8zm9.226 4.994a4.915 4.915 0 0 1-1.918 2.246 8.36 8.36 0 0 1-.273 8.303 4.89 4.89 0 0 1 1.632 2.54 11.156 11.156 0 0 0 .559-13.089zM3.41 7.932A3.41 3.41 0 0 0 0 11.342a3.41 3.41 0 0 0 3.41 3.409 3.41 3.41 0 0 0 3.41-3.41 3.41 3.41 0 0 0-3.41-3.41zm2.027 7.866a4.908 4.908 0 0 1-2.915.358 11.1 11.1 0 0 0 7.991 6.698 11.234 11.234 0 0 0 2.422.249 4.879 4.879 0 0 1-.999-2.85 8.484 8.484 0 0 1-.836-.136 8.304 8.304 0 0 1-5.663-4.32zm11.405.928a3.41 3.41 0 0 0-3.41 3.41 3.41 3.41 0 0 0 3.41 3.41 3.41 3.41 0 0 0 3.41-3.41 3.41 3.41 0 0 0-3.41-3.41z"></path></svg></span> Ubuntu</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>
-In macOS, the easiest way to install any software, is to use a
-<a href="https://brew.sh">
-Homebrew
-</a>
-. You have to install it before. All the instructions can be found on project web page.
-</p>
-<div class="tabbed-alternate tabbed-set" data-tabs="2:7">
-<input type="radio" id="all" name="__tabbed_2" checked>
-<input type="radio" id="png" name="__tabbed_2">
-<input type="radio" id="jpeg" name="__tabbed_2">
-<input type="radio" id="svg" name="__tabbed_2">
-<input type="radio" id="html" name="__tabbed_2">
-<input type="radio" id="css" name="__tabbed_2">
-<input type="radio" id="js" name="__tabbed_2">
-<div class="tabbed-labels">
-<label for="all">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Z">
-</path>
-</svg>
-</span>
-All
-</label>
-<label for="png">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M9 11.5c0 .8-.7 1.5-1.5 1.5h-1v2H5V9h2.5c.8 0 1.5.7 1.5 1.5v1m5 3.5h-1.5l-1-2.5V15H10V9h1.5l1 2.5V9H14v6m5-4.5h-2.5v3h1V12H19v1.7c0 .7-.5 1.3-1.3 1.3h-1.3c-.8 0-1.3-.7-1.3-1.3v-3.3c-.1-.7.4-1.4 1.2-1.4h1.3c.8 0 1.3.7 1.3 1.3v.2h.1m-12.5 0h1v1h-1v-1Z">
-</path>
-</svg>
-</span>
-PNG
-</label>
-<label for="jpeg">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M9 13.5c0 1.1-.9 1.5-2 1.5s-2-.4-2-1.5V12h1.5v1.5h1V9H9v4.5m5-2c0 .8-.7 1.5-1.5 1.5h-1v2H10V9h2.5c.8 0 1.5.7 1.5 1.5v1m5-1h-2.5v3h1V12H19v1.7c0 .7-.5 1.3-1.3 1.3h-1.3c-.8 0-1.3-.7-1.3-1.3v-3.3c-.1-.7.4-1.4 1.2-1.4h1.3c.8 0 1.3.7 1.3 1.3v.2m-7.4 0h1v1h-1v-1Z">
-</path>
-</svg>
-</span>
-JPEG
-</label>
-<label for="svg">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path 
+<p>In macOS, the easiest way to install any software, is to use a <a href="https://brew.sh">Homebrew</a>. You have to install it before. All the instructions can be found on project web page.</p>
+<div class="tabbed-alternate tabbed-set" data-tabs="2:7"><input type="radio" id="all" name="__tabbed_2" checked><input type="radio" id="png" name="__tabbed_2"><input type="radio" id="jpeg" name="__tabbed_2"><input type="radio" id="svg" name="__tabbed_2"><input type="radio" id="html" name="__tabbed_2"><input type="radio" id="css" name="__tabbed_2"><input type="radio" id="js" name="__tabbed_2"><div class="tabbed-labels"><label for="all"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Z"></path></svg></span> All</label><label for="png"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path 
+d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M9 11.5c0 .8-.7 1.5-1.5 1.5h-1v2H5V9h2.5c.8 0 1.5.7 1.5 1.5v1m5 3.5h-1.5l-1-2.5V15H10V9h1.5l1 2.5V9H14v6m5-4.5h-2.5v3h1V12H19v1.7c0 .7-.5 1.3-1.3 1.3h-1.3c-.8 0-1.3-.7-1.3-1.3v-3.3c-.1-.7.4-1.4 1.2-1.4h1.3c.8 0 1.3.7 1.3 1.3v.2h.1m-12.5 0h1v1h-1v-1Z"></path></svg></span> PNG</label><label for="jpeg"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M9 13.5c0 1.1-.9 1.5-2 1.5s-2-.4-2-1.5V12h1.5v1.5h1V9H9v4.5m5-2c0 .8-.7 1.5-1.5 1.5h-1v2H10V9h2.5c.8 0 1.5.7 1.5 1.5v1m5-1h-2.5v3h1V12H19v1.7c0 .7-.5 1.3-1.3 1.3h-1.3c-.8 0-1.3-.7-1.3-1.3v-3.3c-.1-.7.4-1.4 1.2-1.4h1.3c.8 0 1.3.7 1.3 1.3v.2m-7.4 0h1v1h-1v-1Z"></path></svg></span> JPEG</label><label for="svg"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path 
 d="M21.968 9.57a10.384 10.384 0 0 0-1.241-2.85 23.86 23.86 0 0 0 1.172-1.8L19.072 2.1a24.42 24.42 0 0 0-1.85 1.21 10.26 10.26 0 0 0-2.76-1.138c-.12-.72-.267-1.448-.456-2.173H10c-.187.71-.327 1.42-.447 2.131A10.302 10.302 0 0 0 6.708 3.26 23.374 23.374 0 0 0 4.93 2.101L2.102 4.928c.341.582.707 1.138 1.087 1.68a10.33 10.33 0 0 0-1.32 2.988 25.065 25.065 0 0 0-1.868.403v4c.58.152 1.157.274 1.736.38a10.327 10.327 0 0 0 1.282 3.26c-.32.462-.629.937-.917 1.432l2.829 2.828a21.1 21.1 0 0 0 1.38-.88 10.337 10.337 0 0 0 3.341 1.391c.097.53.211 1.06.348 1.59h4c.142-.544.258-1.086.36-1.63a10.299 10.299 0 0 0 3.257-1.407c.472.326.96.642 1.457.936l2.827-2.828a24.877 24.877 0 0 0-1.004-1.56 10.34 10.34 0 0 0 1.2-3.11c.633-.11 1.268-.24 1.902-.405V10a24.344 24.344 0 0 0-2.03-.428zm-2.914 5.19a7.594 7.594 0 0 1-4.052 4.398 7.541 7.541 0 0 1-5.99.08c-1.887-.79-3.454-2.382-4.175-4.34a7.545 7.545 0 0 1 .288-5.944 7.61 7.61 0 0 1 3.824-3.647 7.555 7.555 0 0 1 6.119.082 7.59 7.59 0 0 1 3.643 3.55 7.557 7.557 0 0 1 .343 5.82zm-1.688-.142a1.52 1.52 0 1 1-2.838-.396l-1.2-.897a2.076 2.076 0 0 1-2.418.437l-.96 1.495a1.283 1.283 0 1 1-.405-.259l.96-1.496a2.074 2.074 0 0 1-.7-2.122l-2.063-.808a.96.96 0 0 1-.873.39.96.96 0 1 1 1.052-.858v.02l2.06.81a2.071 2.071 0 0 1 2.675-.943l.97-1.665a1.036 1.036 0 0 1-.281-1.048 1.035 1.035 0 1 1 .695 1.288l-.973 1.665c.846.633 1.082 1.8.548 2.712l1.2.892a1.52 1.52 0 0 1 .76-.404 1.52 1.52 0 0 1 1.792 1.187h-.002z">
-</path>
-</svg>
-</span>
-SVG
-</label>
-<label for="html">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z">
-</path>
-</svg>
-</span>
-HTML
-</label>
-<label for="css">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z">
-</path>
-</svg>
-</span>
-CSS
-</label>
-<label for="js">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z">
-</path>
-</svg>
-</span>
-JS
-</label>
-</div>
+</path></svg></span> SVG</label><label for="html"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"></path></svg></span> HTML</label><label for="css"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"></path></svg></span> CSS</label><label for="js"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path 
+d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"></path></svg></span> JS</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight language-console">
-<pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="go">brew install pngquant oxipng mozjpeg node</span>
+<div class="highlight language-console"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="go">brew install pngquant oxipng mozjpeg node</span>
 </span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="go">npm install -f --no-fund svgo html-minifier-terser postcss cssnano postcss-svgo postcss-cli uglify-js</span>
-</span></code></pre>
-</div>
-</div>
-<div class="tabbed-block">
-<div class="highlight language-console">
-<pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="go">brew install pngquant oxipng</span>
-</span></code></pre>
-</div>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight language-console">
-<pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="go">brew install mozjpeg</span>
-</span></code></pre>
-</div>
+<div class="highlight language-console"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="go">brew install pngquant oxipng</span>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight language-console">
-<pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="go">brew install node</span>
+<div class="highlight language-console"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="go">brew install mozjpeg</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight language-console"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="go">brew install node</span>
 </span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="go">npm install -f --no-fund svgo</span>
-</span></code></pre>
-</div>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight language-console">
-<pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="go">brew install node</span>
+<div class="highlight language-console"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="go">brew install node</span>
 </span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="go">npm install -f --no-fund html-minifier-terser</span>
-</span></code></pre>
-</div>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight language-console">
-<pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="go">brew install node</span>
+<div class="highlight language-console"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="go">brew install node</span>
 </span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="go">npm install -f --no-fund postcss cssnano postcss-svgo postcss-cli</span>
-</span></code></pre>
-</div>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight language-console">
-<pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="go">brew install node</span>
+<div class="highlight language-console"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="go">brew install node</span>
 </span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="go">npm install -f --no-fund uglify-js</span>
-</span></code></pre>
+</span></code></pre></div>
 </div>
 </div>
-</div>
-
-
-
-
-
-
-
 </div>
 </div>
 <div class="tabbed-block">
-<p>
-In Windows, the easiest way to install any software, is to use
-<a href="https://scoop.sh/">
-Scoop
-</a>
-. You have to install it before. All the instructions can be found on project web page.
-</p>
-<div class="tabbed-alternate tabbed-set" data-tabs="3:7">
-<input type="radio" id="all_1" name="__tabbed_3" checked>
-<input type="radio" id="png_1" name="__tabbed_3">
-<input type="radio" id="jpeg_1" name="__tabbed_3">
-<input type="radio" id="svg_1" name="__tabbed_3">
-<input type="radio" id="html_1" name="__tabbed_3">
-<input type="radio" id="css_1" name="__tabbed_3">
-<input type="radio" id="js_1" name="__tabbed_3">
-<div class="tabbed-labels">
-<label for="all_1">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Z">
-</path>
-</svg>
-</span>
-All
-</label>
-<label for="png_1">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M9 11.5c0 .8-.7 1.5-1.5 1.5h-1v2H5V9h2.5c.8 0 1.5.7 1.5 1.5v1m5 3.5h-1.5l-1-2.5V15H10V9h1.5l1 2.5V9H14v6m5-4.5h-2.5v3h1V12H19v1.7c0 .7-.5 1.3-1.3 1.3h-1.3c-.8 0-1.3-.7-1.3-1.3v-3.3c-.1-.7.4-1.4 1.2-1.4h1.3c.8 0 1.3.7 1.3 1.3v.2h.1m-12.5 0h1v1h-1v-1Z">
-</path>
-</svg>
-</span>
-PNG
-</label>
-<label for="jpeg_1">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M9 13.5c0 1.1-.9 1.5-2 1.5s-2-.4-2-1.5V12h1.5v1.5h1V9H9v4.5m5-2c0 .8-.7 1.5-1.5 1.5h-1v2H10V9h2.5c.8 0 1.5.7 1.5 1.5v1m5-1h-2.5v3h1V12H19v1.7c0 .7-.5 1.3-1.3 1.3h-1.3c-.8 0-1.3-.7-1.3-1.3v-3.3c-.1-.7.4-1.4 1.2-1.4h1.3c.8 0 1.3.7 1.3 1.3v.2m-7.4 0h1v1h-1v-1Z">
-</path>
-</svg>
-</span>
-JPEG
-</label>
-<label for="svg_1">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path 
+<p>In Windows, the easiest way to install any software, is to use <a href="https://scoop.sh/">Scoop</a>. You have to install it before. All the instructions can be found on project web page.</p>
+<div class="tabbed-alternate tabbed-set" data-tabs="3:7"><input type="radio" id="all_1" name="__tabbed_3" checked><input type="radio" id="png_1" name="__tabbed_3"><input type="radio" id="jpeg_1" name="__tabbed_3"><input type="radio" id="svg_1" name="__tabbed_3"><input type="radio" id="html_1" name="__tabbed_3"><input type="radio" id="css_1" name="__tabbed_3"><input type="radio" id="js_1" name="__tabbed_3"><div class="tabbed-labels"><label for="all_1"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Z"></path></svg></span> All</label><label for="png_1"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path 
+d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M9 11.5c0 .8-.7 1.5-1.5 1.5h-1v2H5V9h2.5c.8 0 1.5.7 1.5 1.5v1m5 3.5h-1.5l-1-2.5V15H10V9h1.5l1 2.5V9H14v6m5-4.5h-2.5v3h1V12H19v1.7c0 .7-.5 1.3-1.3 1.3h-1.3c-.8 0-1.3-.7-1.3-1.3v-3.3c-.1-.7.4-1.4 1.2-1.4h1.3c.8 0 1.3.7 1.3 1.3v.2h.1m-12.5 0h1v1h-1v-1Z"></path></svg></span> PNG</label><label for="jpeg_1"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M9 13.5c0 1.1-.9 1.5-2 1.5s-2-.4-2-1.5V12h1.5v1.5h1V9H9v4.5m5-2c0 .8-.7 1.5-1.5 1.5h-1v2H10V9h2.5c.8 0 1.5.7 1.5 1.5v1m5-1h-2.5v3h1V12H19v1.7c0 .7-.5 1.3-1.3 1.3h-1.3c-.8 0-1.3-.7-1.3-1.3v-3.3c-.1-.7.4-1.4 1.2-1.4h1.3c.8 0 1.3.7 1.3 1.3v.2m-7.4 0h1v1h-1v-1Z"></path></svg></span> JPEG</label><label for="svg_1"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path 
 d="M21.968 9.57a10.384 10.384 0 0 0-1.241-2.85 23.86 23.86 0 0 0 1.172-1.8L19.072 2.1a24.42 24.42 0 0 0-1.85 1.21 10.26 10.26 0 0 0-2.76-1.138c-.12-.72-.267-1.448-.456-2.173H10c-.187.71-.327 1.42-.447 2.131A10.302 10.302 0 0 0 6.708 3.26 23.374 23.374 0 0 0 4.93 2.101L2.102 4.928c.341.582.707 1.138 1.087 1.68a10.33 10.33 0 0 0-1.32 2.988 25.065 25.065 0 0 0-1.868.403v4c.58.152 1.157.274 1.736.38a10.327 10.327 0 0 0 1.282 3.26c-.32.462-.629.937-.917 1.432l2.829 2.828a21.1 21.1 0 0 0 1.38-.88 10.337 10.337 0 0 0 3.341 1.391c.097.53.211 1.06.348 1.59h4c.142-.544.258-1.086.36-1.63a10.299 10.299 0 0 0 3.257-1.407c.472.326.96.642 1.457.936l2.827-2.828a24.877 24.877 0 0 0-1.004-1.56 10.34 10.34 0 0 0 1.2-3.11c.633-.11 1.268-.24 1.902-.405V10a24.344 24.344 0 0 0-2.03-.428zm-2.914 5.19a7.594 7.594 0 0 1-4.052 4.398 7.541 7.541 0 0 1-5.99.08c-1.887-.79-3.454-2.382-4.175-4.34a7.545 7.545 0 0 1 .288-5.944 7.61 7.61 0 0 1 3.824-3.647 7.555 7.555 0 0 1 6.119.082 7.59 7.59 0 0 1 3.643 3.55 7.557 7.557 0 0 1 .343 5.82zm-1.688-.142a1.52 1.52 0 1 1-2.838-.396l-1.2-.897a2.076 2.076 0 0 1-2.418.437l-.96 1.495a1.283 1.283 0 1 1-.405-.259l.96-1.496a2.074 2.074 0 0 1-.7-2.122l-2.063-.808a.96.96 0 0 1-.873.39.96.96 0 1 1 1.052-.858v.02l2.06.81a2.071 2.071 0 0 1 2.675-.943l.97-1.665a1.036 1.036 0 0 1-.281-1.048 1.035 1.035 0 1 1 .695 1.288l-.973 1.665c.846.633 1.082 1.8.548 2.712l1.2.892a1.52 1.52 0 0 1 .76-.404 1.52 1.52 0 0 1 1.792 1.187h-.002z">
-</path>
-</svg>
-</span>
-SVG
-</label>
-<label for="html_1">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z">
-</path>
-</svg>
-</span>
-HTML
-</label>
-<label for="css_1">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z">
-</path>
-</svg>
-</span>
-CSS
-</label>
-<label for="js_1">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z">
-</path>
-</svg>
-</span>
-JS
-</label>
-</div>
+</path></svg></span> SVG</label><label for="html_1"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"></path></svg></span> HTML</label><label for="css_1"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"></path></svg></span> CSS</label><label for="js_1"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path 
+d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"></path></svg></span> JS</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight language-console">
-<pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="go">scoop bucket add main</span>
+<div class="highlight language-console"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="go">scoop bucket add main</span>
 </span><span id="__span-7-2"><a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="go">scoop install pngquant oxipng mozjpeg nodejs</span>
 </span><span id="__span-7-3"><a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="go">npm install -f --no-fund svgo html-minifier-terser postcss cssnano postcss-svgo postcss-cli uglify-js</span>
-</span></code></pre>
-</div>
-</div>
-<div class="tabbed-block">
-<div class="highlight language-console">
-<pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="go">scoop install pngquant oxipng</span>
-</span></code></pre>
-</div>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight language-console">
-<pre><span></span><code><span id="__span-9-1"><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="go">scoop install mozjpeg</span>
-</span></code></pre>
-</div>
+<div class="highlight language-console"><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="go">scoop install pngquant oxipng</span>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight language-console">
-<pre><span></span><code><span id="__span-10-1"><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="go">scoop install nodejs</span>
+<div class="highlight language-console"><pre><span></span><code><span id="__span-9-1"><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="go">scoop install mozjpeg</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight language-console"><pre><span></span><code><span id="__span-10-1"><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="go">scoop install nodejs</span>
 </span><span id="__span-10-2"><a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="go">npm install -f --no-fund svgo</span>
-</span></code></pre>
-</div>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight language-console">
-<pre><span></span><code><span id="__span-11-1"><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="go">scoop install nodejs</span>
+<div class="highlight language-console"><pre><span></span><code><span id="__span-11-1"><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="go">scoop install nodejs</span>
 </span><span id="__span-11-2"><a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="go">npm install -f --no-fund html-minifier-terser</span>
-</span></code></pre>
-</div>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight language-console">
-<pre><span></span><code><span id="__span-12-1"><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="go">scoop install nodejs</span>
+<div class="highlight language-console"><pre><span></span><code><span id="__span-12-1"><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="go">scoop install nodejs</span>
 </span><span id="__span-12-2"><a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="go">npm install -f --no-fund postcss cssnano postcss-svgo postcss-cli</span>
-</span></code></pre>
-</div>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight language-console">
-<pre><span></span><code><span id="__span-13-1"><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="go">scoop install nodejs</span>
+<div class="highlight language-console"><pre><span></span><code><span id="__span-13-1"><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="go">scoop install nodejs</span>
 </span><span id="__span-13-2"><a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="go">npm install -f --no-fund uglify-js</span>
-</span></code></pre>
+</span></code></pre></div>
 </div>
 </div>
-</div>
-
-
-
-
-
-
 </div>
 </div>
 <div class="tabbed-block">
-<p>
-In Ubuntu, the easiest way to install any software, is to use a built-in packages manager called
-<code>
-apt
-</code>
-.
-</p>
-<div class="tabbed-alternate tabbed-set" data-tabs="4:7">
-<input type="radio" id="all_2" name="__tabbed_4" checked>
-<input type="radio" id="png_2" name="__tabbed_4">
-<input type="radio" id="jpeg_2" name="__tabbed_4">
-<input type="radio" id="svg_2" name="__tabbed_4">
-<input type="radio" id="html_2" name="__tabbed_4">
-<input type="radio" id="css_2" name="__tabbed_4">
-<input type="radio" id="js_2" name="__tabbed_4">
-<div class="tabbed-labels">
-<label for="all_2">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Z">
-</path>
-</svg>
-</span>
-All
-</label>
-<label for="png_2">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M9 11.5c0 .8-.7 1.5-1.5 1.5h-1v2H5V9h2.5c.8 0 1.5.7 1.5 1.5v1m5 3.5h-1.5l-1-2.5V15H10V9h1.5l1 2.5V9H14v6m5-4.5h-2.5v3h1V12H19v1.7c0 .7-.5 1.3-1.3 1.3h-1.3c-.8 0-1.3-.7-1.3-1.3v-3.3c-.1-.7.4-1.4 1.2-1.4h1.3c.8 0 1.3.7 1.3 1.3v.2h.1m-12.5 0h1v1h-1v-1Z">
-</path>
-</svg>
-</span>
-PNG
-</label>
-<label for="jpeg_2">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M9 13.5c0 1.1-.9 1.5-2 1.5s-2-.4-2-1.5V12h1.5v1.5h1V9H9v4.5m5-2c0 .8-.7 1.5-1.5 1.5h-1v2H10V9h2.5c.8 0 1.5.7 1.5 1.5v1m5-1h-2.5v3h1V12H19v1.7c0 .7-.5 1.3-1.3 1.3h-1.3c-.8 0-1.3-.7-1.3-1.3v-3.3c-.1-.7.4-1.4 1.2-1.4h1.3c.8 0 1.3.7 1.3 1.3v.2m-7.4 0h1v1h-1v-1Z">
-</path>
-</svg>
-</span>
-JPEG
-</label>
-<label for="svg_2">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path 
+<p>In Ubuntu, the easiest way to install any software, is to use a built-in packages manager called <code>apt</code>.</p>
+<div class="tabbed-alternate tabbed-set" data-tabs="4:7"><input type="radio" id="all_2" name="__tabbed_4" checked><input type="radio" id="png_2" name="__tabbed_4"><input type="radio" id="jpeg_2" name="__tabbed_4"><input type="radio" id="svg_2" name="__tabbed_4"><input type="radio" id="html_2" name="__tabbed_4"><input type="radio" id="css_2" name="__tabbed_4"><input type="radio" id="js_2" name="__tabbed_4"><div class="tabbed-labels"><label for="all_2"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Z"></path></svg></span> All</label><label for="png_2"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path 
+d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M9 11.5c0 .8-.7 1.5-1.5 1.5h-1v2H5V9h2.5c.8 0 1.5.7 1.5 1.5v1m5 3.5h-1.5l-1-2.5V15H10V9h1.5l1 2.5V9H14v6m5-4.5h-2.5v3h1V12H19v1.7c0 .7-.5 1.3-1.3 1.3h-1.3c-.8 0-1.3-.7-1.3-1.3v-3.3c-.1-.7.4-1.4 1.2-1.4h1.3c.8 0 1.3.7 1.3 1.3v.2h.1m-12.5 0h1v1h-1v-1Z"></path></svg></span> PNG</label><label for="jpeg_2"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M9 13.5c0 1.1-.9 1.5-2 1.5s-2-.4-2-1.5V12h1.5v1.5h1V9H9v4.5m5-2c0 .8-.7 1.5-1.5 1.5h-1v2H10V9h2.5c.8 0 1.5.7 1.5 1.5v1m5-1h-2.5v3h1V12H19v1.7c0 .7-.5 1.3-1.3 1.3h-1.3c-.8 0-1.3-.7-1.3-1.3v-3.3c-.1-.7.4-1.4 1.2-1.4h1.3c.8 0 1.3.7 1.3 1.3v.2m-7.4 0h1v1h-1v-1Z"></path></svg></span> JPEG</label><label for="svg_2"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path 
 d="M21.968 9.57a10.384 10.384 0 0 0-1.241-2.85 23.86 23.86 0 0 0 1.172-1.8L19.072 2.1a24.42 24.42 0 0 0-1.85 1.21 10.26 10.26 0 0 0-2.76-1.138c-.12-.72-.267-1.448-.456-2.173H10c-.187.71-.327 1.42-.447 2.131A10.302 10.302 0 0 0 6.708 3.26 23.374 23.374 0 0 0 4.93 2.101L2.102 4.928c.341.582.707 1.138 1.087 1.68a10.33 10.33 0 0 0-1.32 2.988 25.065 25.065 0 0 0-1.868.403v4c.58.152 1.157.274 1.736.38a10.327 10.327 0 0 0 1.282 3.26c-.32.462-.629.937-.917 1.432l2.829 2.828a21.1 21.1 0 0 0 1.38-.88 10.337 10.337 0 0 0 3.341 1.391c.097.53.211 1.06.348 1.59h4c.142-.544.258-1.086.36-1.63a10.299 10.299 0 0 0 3.257-1.407c.472.326.96.642 1.457.936l2.827-2.828a24.877 24.877 0 0 0-1.004-1.56 10.34 10.34 0 0 0 1.2-3.11c.633-.11 1.268-.24 1.902-.405V10a24.344 24.344 0 0 0-2.03-.428zm-2.914 5.19a7.594 7.594 0 0 1-4.052 4.398 7.541 7.541 0 0 1-5.99.08c-1.887-.79-3.454-2.382-4.175-4.34a7.545 7.545 0 0 1 .288-5.944 7.61 7.61 0 0 1 3.824-3.647 7.555 7.555 0 0 1 6.119.082 7.59 7.59 0 0 1 3.643 3.55 7.557 7.557 0 0 1 .343 5.82zm-1.688-.142a1.52 1.52 0 1 1-2.838-.396l-1.2-.897a2.076 2.076 0 0 1-2.418.437l-.96 1.495a1.283 1.283 0 1 1-.405-.259l.96-1.496a2.074 2.074 0 0 1-.7-2.122l-2.063-.808a.96.96 0 0 1-.873.39.96.96 0 1 1 1.052-.858v.02l2.06.81a2.071 2.071 0 0 1 2.675-.943l.97-1.665a1.036 1.036 0 0 1-.281-1.048 1.035 1.035 0 1 1 .695 1.288l-.973 1.665c.846.633 1.082 1.8.548 2.712l1.2.892a1.52 1.52 0 0 1 .76-.404 1.52 1.52 0 0 1 1.792 1.187h-.002z">
-</path>
-</svg>
-</span>
-SVG
-</label>
-<label for="html_2">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z">
-</path>
-</svg>
-</span>
-HTML
-</label>
-<label for="css_2">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z">
-</path>
-</svg>
-</span>
-CSS
-</label>
-<label for="js_2">
-<span class="twemoji">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z">
-</path>
-</svg>
-</span>
-JS
-</label>
-</div>
+</path></svg></span> SVG</label><label for="html_2"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"></path></svg></span> HTML</label><label for="css_2"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"></path></svg></span> CSS</label><label for="js_2"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path 
+d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"></path></svg></span> JS</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight language-console">
-<pre><span></span><code><span id="__span-14-1"><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="go">sudo apt update</span>
+<div class="highlight language-console"><pre><span></span><code><span id="__span-14-1"><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="go">sudo apt update</span>
 </span><span id="__span-14-2"><a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="go">sudo apt install -y rustc pngquant libjpeg-turbo-progs nodejs</span>
 </span><span id="__span-14-3"><a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="go">cargo install oxipng</span>
 </span><span id="__span-14-4"><a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="go">npm install --no-fund -f svgo html-minifier-terser postcss cssnano postcss-svgo postcss-cli uglify-js</span>
-</span></code></pre>
-</div>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight language-console">
-<pre><span></span><code><span id="__span-15-1"><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="go">sudo apt update</span>
+<div class="highlight language-console"><pre><span></span><code><span id="__span-15-1"><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="go">sudo apt update</span>
 </span><span id="__span-15-2"><a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="go">sudo apt install -y rustc pngquant</span>
 </span><span id="__span-15-3"><a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="go">cargo install oxipng</span>
-</span></code></pre>
-</div>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight language-console">
-<pre><span></span><code><span id="__span-16-1"><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="go">sudo apt update</span>
+<div class="highlight language-console"><pre><span></span><code><span id="__span-16-1"><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="go">sudo apt update</span>
 </span><span id="__span-16-2"><a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="go">sudo apt install -y libjpeg-turbo-progs</span>
-</span></code></pre>
-</div>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight language-console">
-<pre><span></span><code><span id="__span-17-1"><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="go">sudo apt update</span>
+<div class="highlight language-console"><pre><span></span><code><span id="__span-17-1"><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="go">sudo apt update</span>
 </span><span id="__span-17-2"><a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="go">sudo apt install nodejs</span>
 </span><span id="__span-17-3"><a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="go">npm install --no-fund -f svgo</span>
-</span></code></pre>
-</div>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight language-console">
-<pre><span></span><code><span id="__span-18-1"><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="go">sudo apt update</span>
+<div class="highlight language-console"><pre><span></span><code><span id="__span-18-1"><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="go">sudo apt update</span>
 </span><span id="__span-18-2"><a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="go">sudo apt install nodejs</span>
 </span><span id="__span-18-3"><a href="#__codelineno-18-3" id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="go">npm install --no-fund -f html-minifier-terser</span>
-</span></code></pre>
-</div>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight language-console">
-<pre><span></span><code><span id="__span-19-1"><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="go">sudo apt update</span>
+<div class="highlight language-console"><pre><span></span><code><span id="__span-19-1"><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="go">sudo apt update</span>
 </span><span id="__span-19-2"><a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="go">sudo apt install nodejs</span>
 </span><span id="__span-19-3"><a href="#__codelineno-19-3" id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="go">npm install --no-fund -f postcss cssnano postcss-svgo postcss-cli</span>
-</span></code></pre>
-</div>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight language-console">
-<pre><span></span><code><span id="__span-20-1"><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="go">sudo apt update</span>
+<div class="highlight language-console"><pre><span></span><code><span id="__span-20-1"><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="go">sudo apt update</span>
 </span><span id="__span-20-2"><a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="go">sudo apt install nodejs</span>
 </span><span id="__span-20-3"><a href="#__codelineno-20-3" id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="go">npm install --no-fund -f uglify-js</span>
-</span></code></pre>
+</span></code></pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-
-
-
-</div>
-<h2 id="configuration">
-Configuration
-<a href="#configuration" class="headerlink" title="Anchor link to this section for reference">
-¶
-</a>
-</h2>
-<p>
-To enable the built-in optimization plugin, the following lines have to be added to
-<code>
-mkdocs.yml
-</code>
-file:
-</p>
-<div class="tabbed-alternate tabbed-set" data-tabs="5:1">
-<input type="radio" id="mkdocsyml" name="__tabbed_5" checked>
-<div class="tabbed-labels">
-<label for="mkdocsyml">
-<span class="twemoji">
-<svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 14.25 15h-9a.75.75 0 0 1 0-1.5h9a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 10 4.25V1.5H5.75a.25.25 0 0 0-.25.25v2.5a.75.75 0 0 1-1.5 0Zm1.72 4.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.47-1.47-1.47-1.47a.75.75 0 0 1 0-1.06ZM3.28 7.78 1.81 9.25l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Zm8.22-6.218V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z">
-</path>
-</svg>
-</span>
-mkdocs.yml
-</label>
-</div>
+<h2 id="configuration">Configuration<a href="#configuration" class="headerlink" title="Anchor link to this section for reference">¶</a></h2>
+<p>To enable the built-in optimization plugin, the following lines have to be added to <code>mkdocs.yml</code> file:</p>
+<div class="tabbed-alternate tabbed-set" data-tabs="5:1"><input type="radio" id="mkdocsyml" name="__tabbed_5" checked><div class="tabbed-labels"><label for="mkdocsyml"><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 14.25 15h-9a.75.75 0 0 1 0-1.5h9a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 10 4.25V1.5H5.75a.25.25 0 0 0-.25.25v2.5a.75.75 0 0 1-1.5 0Zm1.72 4.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.47-1.47-1.47-1.47a.75.75 0 0 1 0-1.06ZM3.28 7.78 1.81 9.25l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Zm8.22-6.218V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"></path></svg></span> mkdocs.yml</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight language-yaml">
-<pre><span></span><code><span id="__span-21-1"><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="nt">plugins</span><span class="p">:</span>
+<div class="highlight language-yaml"><pre><span></span><code><span id="__span-21-1"><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="nt">plugins</span><span class="p">:</span>
 </span><span id="__span-21-2"><a href="#__codelineno-21-2" id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="hll"><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pub-minifier</span>
-</span></span></code></pre>
+</span></span></code></pre></div>
 </div>
 </div>
 </div>
-</div>
-<p>
-Just like that, all optimization tools are enabled with optimal settings (according to my small experiments).
-</p>
-<h3 id="general">
-General
-<a href="#general" class="headerlink" title="Anchor link to this section for reference">
-¶
-</a>
-</h3>
+<p>Just like that, all optimization tools are enabled with optimal settings (according to my small experiments).</p>
+<h3 id="general">General<a href="#general" class="headerlink" title="Anchor link to this section for reference">¶</a></h3>
 <div class="admonition warning">
-<p class="admonition-title">
-Advanced settings
-</p>
-<p>
-In day to day usage, those settings should be considered as advanced and probably shouldn't be changed. Those options are exposed, so you can adjust some settings offered by a given tool, but you should test those options locally.
-</p>
+<p class="admonition-title">Advanced settings</p>
+<p>In day to day usage, those settings should be considered as advanced and probably shouldn't be changed. Those options are exposed, so you can adjust some settings offered by a given tool, but you should test those options locally.</p>
 </div>
-<div class="tabbed-alternate tabbed-set" data-tabs="6:2">
-<input type="radio" id="mkdocsyml_1" name="__tabbed_6" checked>
-<input type="radio" id="_1" name="__tabbed_6">
-<div class="tabbed-labels">
-<label for="mkdocsyml_1">
-<span class="twemoji">
-<svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 14.25 15h-9a.75.75 0 0 1 0-1.5h9a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 10 4.25V1.5H5.75a.25.25 0 0 0-.25.25v2.5a.75.75 0 0 1-1.5 0Zm1.72 4.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.47-1.47-1.47-1.47a.75.75 0 0 1 0-1.06ZM3.28 7.78 1.81 9.25l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Zm8.22-6.218V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z">
-</path>
-</svg>
-</span>
-mkdocs.yml
-</label>
-<label for="_1">
-<span class="twemoji">
-<svg viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-<!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.-->
-<path d="M64 32C64 14.3 49.7 0 32 0S0 14.3 0 32v352c0 35.3 28.7 64 64 64h192v-64H64V160h192V96H64V32zm224 160c0 17.7 14.3 32 32 32h224c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32h-98.7c-8.5 0-16.6-3.4-22.6-9.4L409.4 9.4c-6-6-14.1-9.4-22.6-9.4H320c-17.7 0-32 14.3-32 32v160zm0 288c0 17.7 14.3 32 32 32h224c17.7 0 32-14.3 32-32V352c0-17.7-14.3-32-32-32h-98.7c-8.5 0-16.6-3.4-22.6-9.4l-13.3-13.3c-6-6-14.1-9.4-22.6-9.4l-66.8.1c-17.7 0-32 14.3-32 32v160z">
-</path>
-</svg>
-</span>
-</label>
-</div>
+<div class="tabbed-alternate tabbed-set" data-tabs="6:2"><input type="radio" id="mkdocsyml_1" name="__tabbed_6" checked><input type="radio" id="_1" name="__tabbed_6"><div class="tabbed-labels"><label for="mkdocsyml_1"><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 14.25 15h-9a.75.75 0 0 1 0-1.5h9a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 10 4.25V1.5H5.75a.25.25 0 0 0-.25.25v2.5a.75.75 0 0 1-1.5 0Zm1.72 4.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.47-1.47-1.47-1.47a.75.75 0 0 1 0-1.06ZM3.28 7.78 1.81 9.25l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Zm8.22-6.218V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"></path></svg></span> mkdocs.yml</label><label for="_1"><span 
+class="twemoji"><svg viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 32C64 14.3 49.7 0 32 0S0 14.3 0 32v352c0 35.3 28.7 64 64 64h192v-64H64V160h192V96H64V32zm224 160c0 17.7 14.3 32 32 32h224c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32h-98.7c-8.5 0-16.6-3.4-22.6-9.4L409.4 9.4c-6-6-14.1-9.4-22.6-9.4H320c-17.7 0-32 14.3-32 32v160zm0 288c0 17.7 14.3 32 32 32h224c17.7 0 32-14.3 32-32V352c0-17.7-14.3-32-32-32h-98.7c-8.5 0-16.6-3.4-22.6-9.4l-13.3-13.3c-6-6-14.1-9.4-22.6-9.4l-66.8.1c-17.7 0-32 14.3-32 32v160z"></path></svg></span></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight language-yaml">
-<pre><span></span><code><span id="__span-22-1"><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="nt">plugins</span><span class="p">:</span>
+<div class="highlight language-yaml"><pre><span></span><code><span id="__span-22-1"><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="nt">plugins</span><span class="p">:</span>
 </span><span id="__span-22-2"><a href="#__codelineno-22-2" id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pub-minifier</span><span class="p">:</span>
 </span><span id="__span-22-3"><a href="#__codelineno-22-3" id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="hll"><span class="w">      </span><span class="nt">cache_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></span><span id="__span-22-4"><a href="#__codelineno-22-4" id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="hll"><span class="w">      </span><span class="nt">cache_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.pub_min_cache</span>
 </span></span><span id="__span-22-5"><a href="#__codelineno-22-5" id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="hll"><span class="w">      </span><span class="nt">cache_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.cache_files_list.yml</span>
 </span></span><span id="__span-22-6"><a href="#__codelineno-22-6" id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="hll"><span class="w">      </span><span class="nt">exclude</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 </span></span><span id="__span-22-7"><a href="#__codelineno-22-7" id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="hll"><span class="w">      </span><span class="nt">threads</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
-</span></span></code></pre>
-</div>
+</span></span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p>
-By default, this directory is created on the same level as
-<code>
-docs
-</code>
-directory and the directory structure looks like this:
-</p>
-<div class="highlight language-text">
-<pre><span></span><code><span id="__span-23-1"><a href="#__codelineno-23-1" id="__codelineno-23-1" name="__codelineno-23-1"></a>    .
+<p>By default, this directory is created on the same level as <code>docs</code> directory and the directory structure looks like this:</p>
+<div class="highlight language-text"><pre><span></span><code><span id="__span-23-1"><a href="#__codelineno-23-1" id="__codelineno-23-1" name="__codelineno-23-1"></a>    .
 </span><span id="__span-23-2"><a href="#__codelineno-23-2" id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="hll">    ├─ .pub_min_cache/
 </span></span><span id="__span-23-3"><a href="#__codelineno-23-3" id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="hll">    │  └─ .cache_files_list.yml
 </span></span><span id="__span-23-4"><a href="#__codelineno-23-4" id="__codelineno-23-4" name="__codelineno-23-4"></a>    ├─ docs/
 </span><span id="__span-23-5"><a href="#__codelineno-23-5" id="__codelineno-23-5" name="__codelineno-23-5"></a>    └─ mkdocs.yml
-</span></code></pre>
+</span></code></pre></div>
 </div>
 </div>
 </div>
-</div>
 <details class="settings">
-<summary>
-<a href="#+minifier.cache_enabled" id="+minifier.cache_enabled">
-cache_enabled
-</a>
-</summary>
-<p>
-Control if caching mechanism is enabled. When it's enabled, you can still disable cache per each file type.
-</p>
+<summary><a href="#+minifier.cache_enabled" id="+minifier.cache_enabled">cache_enabled</a></summary>
+<p>Control if caching mechanism is enabled. When it's enabled, you can still disable cache per each file type.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.cache_dir" id="+minifier.cache_dir">
-cache_dir
-</a>
-</summary>
-<p>
-Defines the directory location, where the cached files are stored.
-</p>
+<summary><a href="#+minifier.cache_dir" id="+minifier.cache_dir">cache_dir</a></summary>
+<p>Defines the directory location, where the cached files are stored.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.cache_file" id="+minifier.cache_file">
-cache_file
-</a>
-</summary>
-<p>
-Defines the name of the file, where all the data needed for proper cache working is stored. When this file is missing or corrupt, it and all cached files will be recreated. This file is stored inside the cache directory, and by default, the directory structure looks like this:
-</p>
+<summary><a href="#+minifier.cache_file" id="+minifier.cache_file">cache_file</a></summary>
+<p>Defines the name of the file, where all the data needed for proper cache working is stored. When this file is missing or corrupt, it and all cached files will be recreated. This file is stored inside the cache directory, and by default, the directory structure looks like this:</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.exclude" id="+minifier.exclude">
-exclude
-</a>
-</summary>
-<p>
-Defines a list of exclusion patterns for files or directories that will not be minified. Each file type has its own exclusion list that inherits values from this one, so you don't have to add the same values.
-</p>
+<summary><a href="#+minifier.exclude" id="+minifier.exclude">exclude</a></summary>
+<p>Defines a list of exclusion patterns for files or directories that will not be minified. Each file type has its own exclusion list that inherits values from this one, so you don't have to add the same values.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.threads" id="+minifier.threads">
-threads
-</a>
-</summary>
-<p>
-File optimization process is a CPU intensive. Most modern computers have processors with multiple CPU cores. Each core can be used to optimize a single file. When your machine has more than one CPU core, it's good to have an ability to utilize all of them during the optimization process because it will reduce overall time needed for optimization of all files. This setting defines how many CPUs the plugin will use for file optimization process. If set to 0 (default value) the plugin will read the number of available CPUs from system settings.
-</p>
+<summary><a href="#+minifier.threads" id="+minifier.threads">threads</a></summary>
+<p>File optimization process is a CPU intensive. Most modern computers have processors with multiple CPU cores. Each core can be used to optimize a single file. When your machine has more than one CPU core, it's good to have an ability to utilize all of them during the optimization process because it will reduce overall time needed for optimization of all files. This setting defines how many CPUs the plugin will use for file optimization process. If set to 0 (default value) the plugin will read the number of available CPUs from system settings.</p>
 </details>
-<h3 id="jpeg-optimization">
-JPEG optimization
-<a href="#jpeg-optimization" class="headerlink" title="Anchor link to this section for reference">
-¶
-</a>
-</h3>
-<p>
-JPEG image file size optimizations are done using
-<a href="https://github.com/mozilla/mozjpeg">
-MozJPEG
-</a>
-tool. As we can read on the project website:
-</p>
+<h3 id="jpeg-optimization">JPEG optimization<a href="#jpeg-optimization" class="headerlink" title="Anchor link to this section for reference">¶</a></h3>
+<p>JPEG image file size optimizations are done using <a href="https://github.com/mozilla/mozjpeg">MozJPEG</a> tool. As we can read on the project website:</p>
 <div class="admonition quote">
-<p class="admonition-title">
-MozJPEG
-</p>
-<p>
-MozJPEG improves JPEG compression efficiency, achieving higher visual quality and smaller file sizes at the same time. It is compatible with the JPEG standard, and the vast majority of the world's deployed JPEG decoders.
-</p>
+<p class="admonition-title">MozJPEG</p>
+<p>MozJPEG improves JPEG compression efficiency, achieving higher visual quality and smaller file sizes at the same time. It is compatible with the JPEG standard, and the vast majority of the world's deployed JPEG decoders.</p>
 </div>
-<p>
-Using this tool reduces JPEG image file size up to 30% with almost no visible quality degradation. You can always try to change it by modification of default settings. Please have in mind that default values were set after my personal experiments and not always can be the most optimal one.
-</p>
-<div class="highlight language-yaml">
-<pre><span></span><code><span id="__span-24-1"><a href="#__codelineno-24-1" id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="nt">plugins</span><span class="p">:</span>
+<p>Using this tool reduces JPEG image file size up to 30% with almost no visible quality degradation. You can always try to change it by modification of default settings. Please have in mind that default values were set after my personal experiments and not always can be the most optimal one.</p>
+<div class="highlight language-yaml"><pre><span></span><code><span id="__span-24-1"><a href="#__codelineno-24-1" id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="nt">plugins</span><span class="p">:</span>
 </span><span id="__span-24-2"><a href="#__codelineno-24-2" id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pub-minifier</span><span class="p">:</span>
 </span><span id="__span-24-3"><a href="#__codelineno-24-3" id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="hll"><span class="w">    </span><span class="nt">jpeg</span><span class="p">:</span>
 </span></span><span id="__span-24-4"><a href="#__codelineno-24-4" id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="hll"><span class="w">        </span><span class="nt">cache_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -1473,221 +908,68 @@ Using this tool reduces JPEG image file size up to 30% with almost no visible qu
 </span></span><span id="__span-24-14"><a href="#__codelineno-24-14" id="__codelineno-24-14" name="__codelineno-24-14"></a><span class="hll"><span class="w">        </span><span class="nt">copy_meta</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
 </span></span><span id="__span-24-15"><a href="#__codelineno-24-15" id="__codelineno-24-15" name="__codelineno-24-15"></a><span class="hll"><span class="w">        </span><span class="nt">smooth</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
 </span></span><span id="__span-24-16"><a href="#__codelineno-24-16" id="__codelineno-24-16" name="__codelineno-24-16"></a><span class="hll"><span class="w">        </span><span class="nt">quality</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">85</span>
-</span></span></code></pre>
-</div>
-<p>
-Above you can find all possible settings with their default values. You don't have to provide them. Just use them if you want to change some settings. The description of the meaning of given setting, you can find below.
-</p>
+</span></span></code></pre></div>
+<p>Above you can find all possible settings with their default values. You don't have to provide them. Just use them if you want to change some settings. The description of the meaning of given setting, you can find below.</p>
 <details class="settings">
-<summary>
-<a href="#+minifier.jpeg.cache_enabled" id="+minifier.jpeg.cache_enabled">
-cache_enabled
-</a>
-</summary>
-<p>
-Control if caching mechanism is enabled.
-</p>
+<summary><a href="#+minifier.jpeg.cache_enabled" id="+minifier.jpeg.cache_enabled">cache_enabled</a></summary>
+<p>Control if caching mechanism is enabled.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.jpeg.enabled" id="+minifier.jpeg.enabled">
-enabled
-</a>
-</summary>
-<p>
-Control if JPEG minifier is enabled.
-</p>
+<summary><a href="#+minifier.jpeg.enabled" id="+minifier.jpeg.enabled">enabled</a></summary>
+<p>Control if JPEG minifier is enabled.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.jpeg.enabled_on_serve" id="+minifier.jpeg.enabled_on_serve">
-enabled_on_serve
-</a>
-</summary>
-<p>
-Control if JPEG minifier is enabled while page is being served locally (mostly used for content creation).
-</p>
+<summary><a href="#+minifier.jpeg.enabled_on_serve" id="+minifier.jpeg.enabled_on_serve">enabled_on_serve</a></summary>
+<p>Control if JPEG minifier is enabled while page is being served locally (mostly used for content creation).</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.jpeg.exclude" id="+minifier.jpeg.exclude">
-exclude
-</a>
-</summary>
-<p>
-Defines a list of exclusion patterns for files or directories that will not be minified.
-</p>
+<summary><a href="#+minifier.jpeg.exclude" id="+minifier.jpeg.exclude">exclude</a></summary>
+<p>Defines a list of exclusion patterns for files or directories that will not be minified.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.jpeg.extensions" id="+minifier.jpeg.extensions">
-exclude
-</a>
-</summary>
-<p>
-Defines a list of file extensions that will be minified.
-</p>
+<summary><a href="#+minifier.jpeg.extensions" id="+minifier.jpeg.extensions">exclude</a></summary>
+<p>Defines a list of file extensions that will be minified.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.jpeg.djpeg_path" id="+minifier.jpeg.djpeg_path">
-djpeg_path
-</a>
-</summary>
-<p>
-Path to
-<code>
-djpeg
-</code>
-tool (part of MozJPEG package).
-</p>
+<summary><a href="#+minifier.jpeg.djpeg_path" id="+minifier.jpeg.djpeg_path">djpeg_path</a></summary>
+<p>Path to <code>djpeg</code> tool (part of MozJPEG package).</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.jpeg.cjpeg_path" id="+minifier.jpeg.cjpeg_path">
-cjpeg_path
-</a>
-</summary>
-<p>
-Path to
-<code>
-cjpeg
-</code>
-tool (part of MozJPEG package).
-</p>
+<summary><a href="#+minifier.jpeg.cjpeg_path" id="+minifier.jpeg.cjpeg_path">cjpeg_path</a></summary>
+<p>Path to <code>cjpeg</code> tool (part of MozJPEG package).</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.jpeg.jpegtran_path" id="+minifier.jpeg.jpegtran_path">
-jpegtran_path
-</a>
-</summary>
-<p>
-Path to
-<code>
-jpegtran
-</code>
-tool (part of MozJPEG package).
-</p>
+<summary><a href="#+minifier.jpeg.jpegtran_path" id="+minifier.jpeg.jpegtran_path">jpegtran_path</a></summary>
+<p>Path to <code>jpegtran</code> tool (part of MozJPEG package).</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.jpeg.optimise" id="+minifier.jpeg.optimise">
-optimise
-</a>
-</summary>
-<p>
-Optimize Huffman table (smaller file, but slow compression).
-</p>
+<summary><a href="#+minifier.jpeg.optimise" id="+minifier.jpeg.optimise">optimise</a></summary>
+<p>Optimize Huffman table (smaller file, but slow compression).</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.jpeg.progressive" id="+minifier.jpeg.progressive">
-progressive
-</a>
-</summary>
-<p>
-Create progressive JPEG file.
-</p>
+<summary><a href="#+minifier.jpeg.progressive" id="+minifier.jpeg.progressive">progressive</a></summary>
+<p>Create progressive JPEG file.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.jpeg.copy_meta" id="+minifier.jpeg.copy_meta">
-copy_meta
-</a>
-</summary>
-<p>
-Defines what metadata to copy:
-<code>
-none
-</code>
-,
-<code>
-comments
-</code>
-,
-<code>
-icc
-</code>
-or
-<code>
-all
-</code>
-.
-</p>
+<summary><a href="#+minifier.jpeg.copy_meta" id="+minifier.jpeg.copy_meta">copy_meta</a></summary>
+<p>Defines what metadata to copy: <code>none</code>, <code>comments</code>, <code>icc</code> or <code>all</code>.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.jpeg.smooth" id="+minifier.jpeg.smooth">
-smooth
-</a>
-</summary>
-<p>
-Level of image smoothness:
-<code>
-0
-</code>
-(disabled, smallest) -
-<code>
-100
-</code>
-(biggest) [default:
-<code>
-10
-</code>
-].
-</p>
+<summary><a href="#+minifier.jpeg.smooth" id="+minifier.jpeg.smooth">smooth</a></summary>
+<p>Level of image smoothness: <code>0</code>(disabled, smallest) - <code>100</code>(biggest) [default: <code>10</code>].</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.jpeg.quality" id="+minifier.jpeg.quality">
-quality
-</a>
-</summary>
-<p>
-Level of compression:
-<code>
-0
-</code>
-(disabled, worst) -
-<code>
-100
-</code>
-(best) [default:
-<code>
-85
-</code>
-].
-</p>
+<summary><a href="#+minifier.jpeg.quality" id="+minifier.jpeg.quality">quality</a></summary>
+<p>Level of compression: <code>0</code>(disabled, worst) - <code>100</code> (best) [default: <code>85</code>].</p>
 </details>
-<h3 id="png-optimization">
-PNG optimization
-<a href="#png-optimization" class="headerlink" title="Anchor link to this section for reference">
-¶
-</a>
-</h3>
-<p>
-PNG image file size optimizations are done using a combination of 2 tools:
-</p>
+<h3 id="png-optimization">PNG optimization<a href="#png-optimization" class="headerlink" title="Anchor link to this section for reference">¶</a></h3>
+<p>PNG image file size optimizations are done using a combination of 2 tools:</p>
 <ol>
-<li>
-<a href="https://pngquant.org">
-pngquant
-</a>
-- this is a tool that reduces PNG file size by changing a color palette and alpha channel. Despite those optimizations, generated images are compatible with all web browsers and operating systems.
-</li>
-<li>
-<a href="https://github.com/shssoichiro/oxipng">
-oxipng
-</a>
-- this is a tool that reduces PNG file size by a lossless optimized compression algorithm.
-</li>
+<li><a href="https://pngquant.org">pngquant</a> - this is a tool that reduces PNG file size by changing a color palette and alpha channel. Despite those optimizations, generated images are compatible with all web browsers and operating systems.</li>
+<li><a href="https://github.com/shssoichiro/oxipng">oxipng</a> - this is a tool that reduces PNG file size by a lossless optimized compression algorithm.</li>
 </ol>
-<p>
-Using those tools together, can reduce PNG image file size by up to 70% with almost no visible quality degradation. You can always try to change it by modifying of default settings. Please have in mind that default values were set after my personal experiments and not always can be the most optimal one.
-</p>
-<div class="highlight language-yaml">
-<pre><span></span><code><span id="__span-25-1"><a href="#__codelineno-25-1" id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="nt">plugins</span><span class="p">:</span>
+<p>Using those tools together, can reduce PNG image file size by up to 70% with almost no visible quality degradation. You can always try to change it by modifying of default settings. Please have in mind that default values were set after my personal experiments and not always can be the most optimal one.</p>
+<div class="highlight language-yaml"><pre><span></span><code><span id="__span-25-1"><a href="#__codelineno-25-1" id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="nt">plugins</span><span class="p">:</span>
 </span><span id="__span-25-2"><a href="#__codelineno-25-2" id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pub-minifier</span><span class="p">:</span>
 </span><span id="__span-25-3"><a href="#__codelineno-25-3" id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="hll"><span class="w">    </span><span class="nt">png</span><span class="p">:</span>
 </span></span><span id="__span-25-4"><a href="#__codelineno-25-4" id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="hll"><span class="w">        </span><span class="nt">cache_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -1703,219 +985,68 @@ Using those tools together, can reduce PNG image file size by up to 70% with alm
 </span></span><span id="__span-25-14"><a href="#__codelineno-25-14" id="__codelineno-25-14" name="__codelineno-25-14"></a><span class="hll"><span class="w">        </span><span class="nt">oxipng_path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">oxipng</span>
 </span></span><span id="__span-25-15"><a href="#__codelineno-25-15" id="__codelineno-25-15" name="__codelineno-25-15"></a><span class="hll"><span class="w">        </span><span class="nt">oxipng_max_compression</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></span><span id="__span-25-16"><a href="#__codelineno-25-16" id="__codelineno-25-16" name="__codelineno-25-16"></a><span class="hll"><span class="w">        </span><span class="nt">strip</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</span></span></code></pre>
-</div>
-<p>
-Above you can find all possible settings with their default values. You don't have to provide them. Just use them if you want to change some settings. The description of the meaning of given setting, you can find below.
-</p>
+</span></span></code></pre></div>
+<p>Above you can find all possible settings with their default values. You don't have to provide them. Just use them if you want to change some settings. The description of the meaning of given setting, you can find below.</p>
 <details class="settings">
-<summary>
-<a href="#+minifier.png.cache_enabled" id="+minifier.png.cache_enabled">
-cache_enabled
-</a>
-</summary>
-<p>
-Control if caching mechanism is enabled.
-</p>
+<summary><a href="#+minifier.png.cache_enabled" id="+minifier.png.cache_enabled">cache_enabled</a></summary>
+<p>Control if caching mechanism is enabled.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.png.enabled" id="+minifier.png.enabled">
-enabled
-</a>
-</summary>
-<p>
-Control if PNG minifier is enabled.
-</p>
+<summary><a href="#+minifier.png.enabled" id="+minifier.png.enabled">enabled</a></summary>
+<p>Control if PNG minifier is enabled.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.png.enabled_on_serve" id="+minifier.png.enabled_on_serve">
-enabled_on_serve
-</a>
-</summary>
-<p>
-Control if PNG minifier is enabled while page is being served locally (mostly used for content creation).
-</p>
+<summary><a href="#+minifier.png.enabled_on_serve" id="+minifier.png.enabled_on_serve">enabled_on_serve</a></summary>
+<p>Control if PNG minifier is enabled while page is being served locally (mostly used for content creation).</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.png.exclude" id="+minifier.png.exclude">
-exclude
-</a>
-</summary>
-<p>
-Defines a list of exclusion patterns for files or directories that will not be minified.
-</p>
+<summary><a href="#+minifier.png.exclude" id="+minifier.png.exclude">exclude</a></summary>
+<p>Defines a list of exclusion patterns for files or directories that will not be minified.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.png.extensions" id="+minifier.png.extensions">
-exclude
-</a>
-</summary>
-<p>
-Defines a list of file extensions that will be minified.
-</p>
+<summary><a href="#+minifier.png.extensions" id="+minifier.png.extensions">exclude</a></summary>
+<p>Defines a list of file extensions that will be minified.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.png.pngquant_enabled" id="+minifier.png.pngquant_enabled">
-pngquant_enabled
-</a>
-</summary>
-<p>
-Control if
-<strong>
-pngquant
-</strong>
-tool is enabled.
-</p>
+<summary><a href="#+minifier.png.pngquant_enabled" id="+minifier.png.pngquant_enabled">pngquant_enabled</a></summary>
+<p>Control if <strong>pngquant</strong> tool is enabled.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.png.pngquant_path" id="+minifier.png.pngquant_path">
-pngquant_path
-</a>
-</summary>
-<p>
-Path to
-<code>
-pnquant
-</code>
-tool.
-</p>
+<summary><a href="#+minifier.png.pngquant_path" id="+minifier.png.pngquant_path">pngquant_path</a></summary>
+<p>Path to <code>pnquant</code> tool.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.png.pngquant_speed" id="+minifier.png.pngquant_speed">
-pngquant_speed
-</a>
-</summary>
-<p>
-Compression speed:
-<code>
-1
-</code>
-(slow but best quality) -
-<code>
-12
-</code>
-(fast but rough) [default:
-<code>
-1
-</code>
-].
-</p>
+<summary><a href="#+minifier.png.pngquant_speed" id="+minifier.png.pngquant_speed">pngquant_speed</a></summary>
+<p>Compression speed: <code>1</code> (slow but best quality) - <code>12</code> (fast but rough) [default: <code>1</code>].</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.png.pngquant_quality" id="+minifier.png.pngquant_quality">
-pngquant_quality
-</a>
-</summary>
-<p>
-Image quality:
-<code>
-0
-</code>
-(worst) -
-<code>
-100
-</code>
-(best) [default:
-<code>
-95
-</code>
-]
-</p>
+<summary><a href="#+minifier.png.pngquant_quality" id="+minifier.png.pngquant_quality">pngquant_quality</a></summary>
+<p>Image quality: <code>0</code> (worst) - <code>100</code> (best) [default: <code>95</code>]</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.png.oxipng_enabled" id="+minifier.png.oxipng_enabled">
-oxipng_enabled
-</a>
-</summary>
-<p>
-Control if
-<strong>
-oxipng
-</strong>
-tool is enabled.
-</p>
+<summary><a href="#+minifier.png.oxipng_enabled" id="+minifier.png.oxipng_enabled">oxipng_enabled</a></summary>
+<p>Control if <strong>oxipng</strong> tool is enabled.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.png.oxipng_path" id="+minifier.png.oxipng_path">
-oxipng_path
-</a>
-</summary>
-<p>
-Path to
-<code>
-oxipng
-</code>
-.
-</p>
+<summary><a href="#+minifier.png.oxipng_path" id="+minifier.png.oxipng_path">oxipng_path</a></summary>
+<p>Path to <code>oxipng</code>.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.png.oxipng_path" id="+minifier.png.oxipng_max_compression">
-oxipng_max_compression
-</a>
-</summary>
-<p>
-Use max possible compression.
-</p>
+<summary><a href="#+minifier.png.oxipng_path" id="+minifier.png.oxipng_max_compression">oxipng_max_compression</a></summary>
+<p>Use max possible compression.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.png.oxipng_path" id="+minifier.png.strip">
-strip
-</a>
-</summary>
-<p>
-Strip metadata from file.
-</p>
+<summary><a href="#+minifier.png.oxipng_path" id="+minifier.png.strip">strip</a></summary>
+<p>Strip metadata from file.</p>
 </details>
-<h3 id="svg-optimization">
-SVG optimization
-<a href="#svg-optimization" class="headerlink" title="Anchor link to this section for reference">
-¶
-</a>
-</h3>
-<p>
-SVG vector image file size optimizations are done using
-<a href="https://github.com/svg/svgo">
-SVGO
-</a>
-tool. This is a
-<a href="https://nodejs.org/">
-Node.js-based
-</a>
-tool. As we can read on the project website:
-</p>
+<h3 id="svg-optimization">SVG optimization<a href="#svg-optimization" class="headerlink" title="Anchor link to this section for reference">¶</a></h3>
+<p>SVG vector image file size optimizations are done using <a href="https://github.com/svg/svgo">SVGO</a> tool. This is a <a href="https://nodejs.org/">Node.js-based</a> tool. As we can read on the project website:</p>
 <div class="admonition quote">
-<p class="admonition-title">
-SVGO
-</p>
-<p>
-SVG files, especially those exported from various editors, usually contain a lot of redundant and useless information. This can include editor metadata, comments, hidden elements, default or non-optimal values and other stuff that can be safely removed or converted without affecting the SVG rendering result.
-</p>
+<p class="admonition-title">SVGO</p>
+<p>SVG files, especially those exported from various editors, usually contain a lot of redundant and useless information. This can include editor metadata, comments, hidden elements, default or non-optimal values and other stuff that can be safely removed or converted without affecting the SVG rendering result.</p>
 </div>
-<p>
-Using this tool reduces SVG vector image file size by up to 70% with no visible quality degradation. This tool has multiple plugins that impact the effectiveness of an optimization. At this time, the
-<code>
-pub-minifier
-</code>
-plugin doesn't allow changing the
-<a href="https://github.com/svg/svgo#built-in-plugins">
-default settings of used SVGO plugins
-</a>
-.
-</p>
-<div class="highlight language-yaml">
-<pre><span></span><code><span id="__span-26-1"><a href="#__codelineno-26-1" id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="nt">plugins</span><span class="p">:</span>
+<p>Using this tool reduces SVG vector image file size by up to 70% with no visible quality degradation. This tool has multiple plugins that impact the effectiveness of an optimization. At this time, the <code>pub-minifier</code> plugin doesn't allow changing the <a href="https://github.com/svg/svgo#built-in-plugins">default settings of used SVGO plugins</a>.</p>
+<div class="highlight language-yaml"><pre><span></span><code><span id="__span-26-1"><a href="#__codelineno-26-1" id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="nt">plugins</span><span class="p">:</span>
 </span><span id="__span-26-2"><a href="#__codelineno-26-2" id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pub-minifier</span><span class="p">:</span>
 </span><span id="__span-26-3"><a href="#__codelineno-26-3" id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="hll"><span class="w">    </span><span class="nt">svg</span><span class="p">:</span>
 </span></span><span id="__span-26-4"><a href="#__codelineno-26-4" id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="hll"><span class="w">        </span><span class="nt">cache_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -1925,123 +1056,44 @@ default settings of used SVGO plugins
 </span></span><span id="__span-26-8"><a href="#__codelineno-26-8" id="__codelineno-26-8" name="__codelineno-26-8"></a><span class="hll"><span class="w">        </span><span class="nt">extensions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">".[sS][vV][gG]"</span><span class="p p-Indicator">]</span>
 </span></span><span id="__span-26-9"><a href="#__codelineno-26-9" id="__codelineno-26-9" name="__codelineno-26-9"></a><span class="hll"><span class="w">        </span><span class="nt">svgo_path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">svgo</span>
 </span></span><span id="__span-26-10"><a href="#__codelineno-26-10" id="__codelineno-26-10" name="__codelineno-26-10"></a><span class="hll"><span class="w">        </span><span class="nt">multipass</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</span></span></code></pre>
-</div>
-<p>
-Above you can find all possible settings with their default values. You don't have to provide them. Just use them if you want to change some settings. The description of the meaning of given setting, you can find below.
-</p>
+</span></span></code></pre></div>
+<p>Above you can find all possible settings with their default values. You don't have to provide them. Just use them if you want to change some settings. The description of the meaning of given setting, you can find below.</p>
 <details class="settings">
-<summary>
-<a href="#+minifier.svg.cache_enabled" id="+minifier.svg.cache_enabled">
-cache_enabled
-</a>
-</summary>
-<p>
-Control if caching mechanism is enabled.
-</p>
+<summary><a href="#+minifier.svg.cache_enabled" id="+minifier.svg.cache_enabled">cache_enabled</a></summary>
+<p>Control if caching mechanism is enabled.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.svg.enabled" id="+minifier.svg.enabled">
-enabled
-</a>
-</summary>
-<p>
-Control if SVG minifier is enabled.
-</p>
+<summary><a href="#+minifier.svg.enabled" id="+minifier.svg.enabled">enabled</a></summary>
+<p>Control if SVG minifier is enabled.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.svg.enabled_on_serve" id="+minifier.svg.enabled_on_serve">
-enabled_on_serve
-</a>
-</summary>
-<p>
-Control if SVG minifier is enabled while page is being served locally (mostly used for content creation).
-</p>
+<summary><a href="#+minifier.svg.enabled_on_serve" id="+minifier.svg.enabled_on_serve">enabled_on_serve</a></summary>
+<p>Control if SVG minifier is enabled while page is being served locally (mostly used for content creation).</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.svg.exclude" id="+minifier.svg.exclude">
-exclude
-</a>
-</summary>
-<p>
-Defines a list of exclusion patterns for files or directories that will not be minified.
-</p>
+<summary><a href="#+minifier.svg.exclude" id="+minifier.svg.exclude">exclude</a></summary>
+<p>Defines a list of exclusion patterns for files or directories that will not be minified.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.svg.extensions" id="+minifier.svg.extensions">
-exclude
-</a>
-</summary>
-<p>
-Defines a list of file extensions that will be minified.
-</p>
+<summary><a href="#+minifier.svg.extensions" id="+minifier.svg.extensions">exclude</a></summary>
+<p>Defines a list of file extensions that will be minified.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.svg.svgo_path" id="+minifier.svg.svgo_path">
-svgo_path
-</a>
-</summary>
-<p>
-Path to
-<code>
-svgo
-</code>
-tool.
-</p>
+<summary><a href="#+minifier.svg.svgo_path" id="+minifier.svg.svgo_path">svgo_path</a></summary>
+<p>Path to <code>svgo</code> tool.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.svg.multipass" id="+minifier.svg.multipass">
-multipass
-</a>
-</summary>
-<p>
-Do multiple passes during compression to ensure all optimizations are apllied.
-</p>
+<summary><a href="#+minifier.svg.multipass" id="+minifier.svg.multipass">multipass</a></summary>
+<p>Do multiple passes during compression to ensure all optimizations are apllied.</p>
 </details>
-<h3 id="html-optimization">
-HTML optimization
-<a href="#html-optimization" class="headerlink" title="Anchor link to this section for reference">
-¶
-</a>
-</h3>
-<p>
-HTML file size optimizations are done using
-<a href="https://github.com/kangax/html-minifier">
-html-minifier
-</a>
-tool. This is a
-<a href="https://nodejs.org/">
-Node.js-based
-</a>
-tool. As we can read on the project website:
-</p>
+<h3 id="html-optimization">HTML optimization<a href="#html-optimization" class="headerlink" title="Anchor link to this section for reference">¶</a></h3>
+<p>HTML file size optimizations are done using <a href="https://github.com/kangax/html-minifier">html-minifier</a> tool. This is a <a href="https://nodejs.org/">Node.js-based</a> tool. As we can read on the project website:</p>
 <div class="admonition quote">
-<p class="admonition-title">
-HTMLMinifier
-</p>
-<p>
-HTMLMinifier is a highly
-<strong>
-configurable
-</strong>
-,
-<strong>
-well-tested
-</strong>
-, JavaScript-based HTML minifier.
-</p>
+<p class="admonition-title">HTMLMinifier</p>
+<p>HTMLMinifier is a highly <strong>configurable</strong>, <strong>well-tested</strong>, JavaScript-based HTML minifier.</p>
 </div>
-<p>
-Using this tool reduces HTML file size by up to 30%. You can always try to change it by modification of default settings. Please have in mind that default values were set after my personal experiments and not always can be the most optimal one.
-</p>
-<div class="highlight language-yaml">
-<pre><span></span><code><span id="__span-27-1"><a href="#__codelineno-27-1" id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="nt">plugins</span><span class="p">:</span>
+<p>Using this tool reduces HTML file size by up to 30%. You can always try to change it by modification of default settings. Please have in mind that default values were set after my personal experiments and not always can be the most optimal one.</p>
+<div class="highlight language-yaml"><pre><span></span><code><span id="__span-27-1"><a href="#__codelineno-27-1" id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="nt">plugins</span><span class="p">:</span>
 </span><span id="__span-27-2"><a href="#__codelineno-27-2" id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pub-minifier</span><span class="p">:</span>
 </span><span id="__span-27-3"><a href="#__codelineno-27-3" id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="hll"><span class="w">    </span><span class="nt">html</span><span class="p">:</span>
 </span></span><span id="__span-27-4"><a href="#__codelineno-27-4" id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="hll"><span class="w">        </span><span class="nt">cache_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -2062,289 +1114,98 @@ Using this tool reduces HTML file size by up to 30%. You can always try to chang
 </span></span><span id="__span-27-19"><a href="#__codelineno-27-19" id="__codelineno-27-19" name="__codelineno-27-19"></a><span class="hll"><span class="w">        </span><span class="nt">sort_attributes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></span><span id="__span-27-20"><a href="#__codelineno-27-20" id="__codelineno-27-20" name="__codelineno-27-20"></a><span class="hll"><span class="w">        </span><span class="nt">sort_class_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></span><span id="__span-27-21"><a href="#__codelineno-27-21" id="__codelineno-27-21" name="__codelineno-27-21"></a><span class="hll"><span class="w">        </span><span class="nt">max_line_length</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1024</span>
-</span></span></code></pre>
-</div>
-<p>
-Above you can find all possible settings with their default values. You don't have to provide them. Just use them if you want to change some settings. The description of the meaning of given setting, you can find below.
-</p>
+</span></span></code></pre></div>
+<p>Above you can find all possible settings with their default values. You don't have to provide them. Just use them if you want to change some settings. The description of the meaning of given setting, you can find below.</p>
 <details class="settings">
-<summary>
-<a href="#+minifier.html.cache_enabled" id="+minifier.html.cache_enabled">
-cache_enabled
-</a>
-</summary>
-<p>
-Control if caching mechanism is enabled.
-</p>
+<summary><a href="#+minifier.html.cache_enabled" id="+minifier.html.cache_enabled">cache_enabled</a></summary>
+<p>Control if caching mechanism is enabled.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.html.enabled" id="+minifier.html.enabled">
-enabled
-</a>
-</summary>
-<p>
-Control if HTML minifier is enabled.
-</p>
+<summary><a href="#+minifier.html.enabled" id="+minifier.html.enabled">enabled</a></summary>
+<p>Control if HTML minifier is enabled.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.html.enabled_on_serve" id="+minifier.html.enabled_on_serve">
-enabled_on_serve
-</a>
-</summary>
-<p>
-Control if HTML minifier is enabled while page is being served locally (mostly used for content creation).
-</p>
+<summary><a href="#+minifier.html.enabled_on_serve" id="+minifier.html.enabled_on_serve">enabled_on_serve</a></summary>
+<p>Control if HTML minifier is enabled while page is being served locally (mostly used for content creation).</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.html.exclude" id="+minifier.html.exclude">
-exclude
-</a>
-</summary>
-<p>
-Defines a list of exclusion patterns for files or directories that will not be minified.
-</p>
+<summary><a href="#+minifier.html.exclude" id="+minifier.html.exclude">exclude</a></summary>
+<p>Defines a list of exclusion patterns for files or directories that will not be minified.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.html.extensions" id="+minifier.html.extensions">
-exclude
-</a>
-</summary>
-<p>
-Defines a list of file extensions that will be minified.
-</p>
+<summary><a href="#+minifier.html.extensions" id="+minifier.html.extensions">exclude</a></summary>
+<p>Defines a list of file extensions that will be minified.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.html.html_minifier_path" id="+minifier.html.html_minifier_path">
-html_minifier_path
-</a>
-</summary>
-<p>
-Path to
-<code>
-html-minifier
-</code>
-tool.
-</p>
+<summary><a href="#+minifier.html.html_minifier_path" id="+minifier.html.html_minifier_path">html_minifier_path</a></summary>
+<p>Path to <code>html-minifier</code> tool.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.html.case_sensitive" id="+minifier.html.case_sensitive">
-case_sensitive
-</a>
-</summary>
-<p>
-Treat attributes in case sensitive manner.
-</p>
+<summary><a href="#+minifier.html.case_sensitive" id="+minifier.html.case_sensitive">case_sensitive</a></summary>
+<p>Treat attributes in case sensitive manner.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.html.minify_css" id="+minifier.html.minify_css">
-minify_css
-</a>
-</summary>
-<p>
-Minify CSS that is inside HTML (using
-<code>
-celan-css
-</code>
-)
-</p>
+<summary><a href="#+minifier.html.minify_css" id="+minifier.html.minify_css">minify_css</a></summary>
+<p>Minify CSS that is inside HTML (using <code>celan-css</code>)</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.html.minify_js" id="+minifier.html.minify_js">
-minify_js
-</a>
-</summary>
-<p>
-Minify JS that is inside HTML (using
-<code>
-uglify-js
-</code>
-).
-</p>
+<summary><a href="#+minifier.html.minify_js" id="+minifier.html.minify_js">minify_js</a></summary>
+<p>Minify JS that is inside HTML (using <code>uglify-js</code>).</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.html.remove_comments" id="+minifier.html.remove_comments">
-remove_comments
-</a>
-</summary>
-<p>
-Strip HTML comments.
-</p>
+<summary><a href="#+minifier.html.remove_comments" id="+minifier.html.remove_comments">remove_comments</a></summary>
+<p>Strip HTML comments.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.html.remove_tag_whitespace" id="+minifier.html.remove_tag_whitespace">
-remove_tag_whitespace
-</a>
-</summary>
-<p>
-Remove space between attributes whenever possible.
-</p>
+<summary><a href="#+minifier.html.remove_tag_whitespace" id="+minifier.html.remove_tag_whitespace">remove_tag_whitespace</a></summary>
+<p>Remove space between attributes whenever possible.</p>
 <details class="danger" open>
-<summary>
-Danger !!!
-</summary>
-<p>
-Enabling this setting may lead to problems with code blocks, etc.
-</p>
+<summary>Danger !!!</summary>
+<p>Enabling this setting may lead to problems with code blocks, etc.</p>
 </details>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.html.collapse_whitespace" id="+minifier.html.collapse_whitespace">
-collapse_whitespace
-</a>
-</summary>
-<p>
-Collapse white space that contributes to text nodes in a document tree.
-</p>
+<summary><a href="#+minifier.html.collapse_whitespace" id="+minifier.html.collapse_whitespace">collapse_whitespace</a></summary>
+<p>Collapse white space that contributes to text nodes in a document tree.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.html.conservative_collapse" id="+minifier.html.conservative_collapse">
-conservative_collapse
-</a>
-</summary>
-<p>
-Always collapse to 1 space (never remove it entirely).
-</p>
+<summary><a href="#+minifier.html.conservative_collapse" id="+minifier.html.conservative_collapse">conservative_collapse</a></summary>
+<p>Always collapse to 1 space (never remove it entirely).</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.html.collapse_boolean_attributes" id="+minifier.html.collapse_boolean_attributes">
-collapse_boolean_attributes
-</a>
-</summary>
-<p>
-Omit attribute values from boolean attributes.
-</p>
+<summary><a href="#+minifier.html.collapse_boolean_attributes" id="+minifier.html.collapse_boolean_attributes">collapse_boolean_attributes</a></summary>
+<p>Omit attribute values from boolean attributes.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.html.preserve_line_breaks" id="+minifier.html.preserve_line_breaks">
-preserve_line_breaks
-</a>
-</summary>
-<p>
-Always collapse to 1 line break (never remove it entirely) when whitespace between tags include a line break.
-</p>
+<summary><a href="#+minifier.html.preserve_line_breaks" id="+minifier.html.preserve_line_breaks">preserve_line_breaks</a></summary>
+<p>Always collapse to 1 line break (never remove it entirely) when whitespace between tags include a line break.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.html.sort_attributes" id="+minifier.html.sort_attributes">
-sort_attributes
-</a>
-</summary>
-<p>
-Sort attributes by frequency.
-</p>
+<summary><a href="#+minifier.html.sort_attributes" id="+minifier.html.sort_attributes">sort_attributes</a></summary>
+<p>Sort attributes by frequency.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.html.sort_class_name" id="+minifier.html.sort_class_name">
-sort_class_name
-</a>
-</summary>
-<p>
-Sort style classes by frequency.
-</p>
+<summary><a href="#+minifier.html.sort_class_name" id="+minifier.html.sort_class_name">sort_class_name</a></summary>
+<p>Sort style classes by frequency.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.html.max_line_length" id="+minifier.html.max_line_length">
-max_line_length
-</a>
-</summary>
-<p>
-Define max line length after optimization:
-<code>
-80
-</code>
--
-<code>
-4096
-</code>
-[default:
-<code>
-1024
-</code>
-].
-</p>
+<summary><a href="#+minifier.html.max_line_length" id="+minifier.html.max_line_length">max_line_length</a></summary>
+<p>Define max line length after optimization: <code>80</code> - <code>4096</code> [default: <code>1024</code>].</p>
 </details>
-<h3 id="css-optimization">
-CSS optimization
-<a href="#css-optimization" class="headerlink" title="Anchor link to this section for reference">
-¶
-</a>
-</h3>
-<p>
-CSS file size optimizations are done using
-<a href="https://postcss.org">
-PostCSS
-</a>
-tool and some plugins:
-</p>
+<h3 id="css-optimization">CSS optimization<a href="#css-optimization" class="headerlink" title="Anchor link to this section for reference">¶</a></h3>
+<p>CSS file size optimizations are done using <a href="https://postcss.org">PostCSS</a> tool and some plugins:</p>
 <ul>
-<li>
-<a href="https://github.com/postcss/postcss-cli">
-PostCSS CLI
-</a>
-- this is a Command Line Interface for this tool,
-</li>
-<li>
-<a href="https://github.com/cssnano/cssnano">
-cssnano
-</a>
-- compression tool plugin,
-</li>
-<li>
-postcss-svgo - inline SVG files optimization plugin using an
-<a href="https://github.com/svg/svgo">
-SVGO
-</a>
-tool (the same we are using for an
-<a href="./#svg-optimization" id="85402f38e0b82207fc801c8d8c8becf1">
-SVG file optimization
-</a>
-).
-</li>
+<li><a href="https://github.com/postcss/postcss-cli">PostCSS CLI</a> - this is a Command Line Interface for this tool,</li>
+<li><a href="https://github.com/cssnano/cssnano">cssnano</a> - compression tool plugin,</li>
+<li>postcss-svgo - inline SVG files optimization plugin using an <a href="https://github.com/svg/svgo">SVGO</a> tool (the same we are using for an <a href="./#svg-optimization" id="85402f38e0b82207fc801c8d8c8becf1">SVG file optimization</a>).</li>
 </ul>
-<p>
-This is a
-<a href="https://nodejs.org/">
-Node.js
-</a>
-based tool. As we can read on the project website:
-</p>
+<p>This is a <a href="https://nodejs.org/">Node.js</a> based tool. As we can read on the project website:</p>
 <div class="admonition quote">
-<p class="admonition-title">
-CSSnano
-</p>
-<p>
-CSSnano takes your nicely formatted CSS and runs it through many focused optimisations, to ensure that the final result is as small as possible for a production environment.
-</p>
+<p class="admonition-title">CSSnano</p>
+<p>CSSnano takes your nicely formatted CSS and runs it through many focused optimisations, to ensure that the final result is as small as possible for a production environment.</p>
 </div>
-<p>
-Using this tool reduces CSS file size by up to 30%. At this time, the
-<code>
-pub-minifier
-</code>
-plugin doesn't allow changing the
-<a href="https://cssnano.co/docs/what-are-optimisations/#what-optimisations-do-you-support%3F">
-default settings of cssnano
-</a>
-.
-</p>
-<div class="highlight language-yaml">
-<pre><span></span><code><span id="__span-28-1"><a href="#__codelineno-28-1" id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="nt">plugins</span><span class="p">:</span>
+<p>Using this tool reduces CSS file size by up to 30%. At this time, the <code>pub-minifier</code> plugin doesn't allow changing the <a href="https://cssnano.co/docs/what-are-optimisations/#what-optimisations-do-you-support%3F">default settings of cssnano</a>.</p>
+<div class="highlight language-yaml"><pre><span></span><code><span id="__span-28-1"><a href="#__codelineno-28-1" id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="nt">plugins</span><span class="p">:</span>
 </span><span id="__span-28-2"><a href="#__codelineno-28-2" id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pub-minifier</span><span class="p">:</span>
 </span><span id="__span-28-3"><a href="#__codelineno-28-3" id="__codelineno-28-3" name="__codelineno-28-3"></a><span class="hll"><span class="w">    </span><span class="nt">css</span><span class="p">:</span>
 </span></span><span id="__span-28-4"><a href="#__codelineno-28-4" id="__codelineno-28-4" name="__codelineno-28-4"></a><span class="hll"><span class="w">        </span><span class="nt">cache_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -2354,123 +1215,44 @@ default settings of cssnano
 </span></span><span id="__span-28-8"><a href="#__codelineno-28-8" id="__codelineno-28-8" name="__codelineno-28-8"></a><span class="hll"><span class="w">        </span><span class="nt">extensions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">".[cC][sS][sS]"</span><span class="p p-Indicator">]</span>
 </span></span><span id="__span-28-9"><a href="#__codelineno-28-9" id="__codelineno-28-9" name="__codelineno-28-9"></a><span class="hll"><span class="w">        </span><span class="nt">postcss_path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postcss</span>
 </span></span><span id="__span-28-10"><a href="#__codelineno-28-10" id="__codelineno-28-10" name="__codelineno-28-10"></a><span class="hll"><span class="w">        </span><span class="nt">skip_minified</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</span></span></code></pre>
-</div>
-<p>
-Above you can find all possible settings with their default values. You don't have to provide them. Just use them if you want to change some settings. The description of the meaning of given setting, you can find below.
-</p>
+</span></span></code></pre></div>
+<p>Above you can find all possible settings with their default values. You don't have to provide them. Just use them if you want to change some settings. The description of the meaning of given setting, you can find below.</p>
 <details class="settings">
-<summary>
-<a href="#+minifier.css.cache_enabled" id="+minifier.css.cache_enabled">
-cache_enabled
-</a>
-</summary>
-<p>
-Control if caching mechanism is enabled.
-</p>
+<summary><a href="#+minifier.css.cache_enabled" id="+minifier.css.cache_enabled">cache_enabled</a></summary>
+<p>Control if caching mechanism is enabled.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.css.enabled" id="+minifier.css.enabled">
-enabled
-</a>
-</summary>
-<p>
-Control if CSS minifier is enabled.
-</p>
+<summary><a href="#+minifier.css.enabled" id="+minifier.css.enabled">enabled</a></summary>
+<p>Control if CSS minifier is enabled.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.css.enabled_on_serve" id="+minifier.css.enabled_on_serve">
-enabled_on_serve
-</a>
-</summary>
-<p>
-Control if CSS minifier is enabled while page is being served locally (mostly used for content creation).
-</p>
+<summary><a href="#+minifier.css.enabled_on_serve" id="+minifier.css.enabled_on_serve">enabled_on_serve</a></summary>
+<p>Control if CSS minifier is enabled while page is being served locally (mostly used for content creation).</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.css.exclude" id="+minifier.css.exclude">
-exclude
-</a>
-</summary>
-<p>
-Defines a list of exclusion patterns for files or directories that will not be minified.
-</p>
+<summary><a href="#+minifier.css.exclude" id="+minifier.css.exclude">exclude</a></summary>
+<p>Defines a list of exclusion patterns for files or directories that will not be minified.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.css.extensions" id="+minifier.css.extensions">
-exclude
-</a>
-</summary>
-<p>
-Defines a list of file extensions that will be minified.
-</p>
+<summary><a href="#+minifier.css.extensions" id="+minifier.css.extensions">exclude</a></summary>
+<p>Defines a list of file extensions that will be minified.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.css.postcss_path" id="+minifier.css.postcss_path">
-postcss_path
-</a>
-</summary>
-<p>
-Path to
-<code>
-postcss
-</code>
-tool.
-</p>
+<summary><a href="#+minifier.css.postcss_path" id="+minifier.css.postcss_path">postcss_path</a></summary>
+<p>Path to <code>postcss</code> tool.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.css.skip_minified" id="+minifier.css.skip_minified">
-skip_minified
-</a>
-</summary>
-<p>
-Skip files that are already minified (usually one with
-<code>
-.min.css
-</code>
-extension).
-</p>
+<summary><a href="#+minifier.css.skip_minified" id="+minifier.css.skip_minified">skip_minified</a></summary>
+<p>Skip files that are already minified (usually one with <code>.min.css</code> extension).</p>
 </details>
-<h3 id="js-optimization">
-JS optimization
-<a href="#js-optimization" class="headerlink" title="Anchor link to this section for reference">
-¶
-</a>
-</h3>
-<p>
-JS file size optimizations are done using
-<a href="https://github.com/mishoo/UglifyJS">
-UglifyJS
-</a>
-tool. This is a
-<a href="https://nodejs.org/">
-Node.js-based
-</a>
-tool. As we can read on the project website:
-</p>
+<h3 id="js-optimization">JS optimization<a href="#js-optimization" class="headerlink" title="Anchor link to this section for reference">¶</a></h3>
+<p>JS file size optimizations are done using <a href="https://github.com/mishoo/UglifyJS">UglifyJS</a> tool. This is a <a href="https://nodejs.org/">Node.js-based</a> tool. As we can read on the project website:</p>
 <div class="admonition quote">
-<p class="admonition-title">
-UglifyJS
-</p>
-<p>
-UglifyJS is a JavaScript parser, minifier, compressor and beautifier toolkit.
-</p>
+<p class="admonition-title">UglifyJS</p>
+<p>UglifyJS is a JavaScript parser, minifier, compressor and beautifier toolkit.</p>
 </div>
-<p>
-Using this tool reduces JS file size by up to 20%. At this time, the
-<code>
-pub-minifier
-</code>
-plugin doesn't allow changing the default settings.
-</p>
-<div class="highlight language-yaml">
-<pre><span></span><code><span id="__span-29-1"><a href="#__codelineno-29-1" id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="nt">plugins</span><span class="p">:</span>
+<p>Using this tool reduces JS file size by up to 20%. At this time, the <code>pub-minifier</code> plugin doesn't allow changing the default settings.</p>
+<div class="highlight language-yaml"><pre><span></span><code><span id="__span-29-1"><a href="#__codelineno-29-1" id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="nt">plugins</span><span class="p">:</span>
 </span><span id="__span-29-2"><a href="#__codelineno-29-2" id="__codelineno-29-2" name="__codelineno-29-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pub-minifier</span><span class="p">:</span>
 </span><span id="__span-29-3"><a href="#__codelineno-29-3" id="__codelineno-29-3" name="__codelineno-29-3"></a><span class="hll"><span class="w">    </span><span class="nt">js</span><span class="p">:</span>
 </span></span><span id="__span-29-4"><a href="#__codelineno-29-4" id="__codelineno-29-4" name="__codelineno-29-4"></a><span class="hll"><span class="w">        </span><span class="nt">cache_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -2480,129 +1262,46 @@ plugin doesn't allow changing the default settings.
 </span></span><span id="__span-29-8"><a href="#__codelineno-29-8" id="__codelineno-29-8" name="__codelineno-29-8"></a><span class="hll"><span class="w">        </span><span class="nt">extensions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">".[jJ][sS]"</span><span class="p p-Indicator">]</span>
 </span></span><span id="__span-29-9"><a href="#__codelineno-29-9" id="__codelineno-29-9" name="__codelineno-29-9"></a><span class="hll"><span class="w">        </span><span class="nt">uglifyjs_path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uglifyjs</span>
 </span></span><span id="__span-29-10"><a href="#__codelineno-29-10" id="__codelineno-29-10" name="__codelineno-29-10"></a><span class="hll"><span class="w">        </span><span class="nt">skip_minified</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</span></span></code></pre>
-</div>
-<p>
-Above you can find all possible settings with their default values. You don't have to provide them. Just use them if you want to change some settings. The description of the meaning of given setting, you can find below.
-</p>
+</span></span></code></pre></div>
+<p>Above you can find all possible settings with their default values. You don't have to provide them. Just use them if you want to change some settings. The description of the meaning of given setting, you can find below.</p>
 <details class="settings">
-<summary>
-<a href="#+minifier.js.cache_enabled" id="+minifier.js.cache_enabled">
-cache_enabled
-</a>
-</summary>
-<p>
-Control if caching mechanism is enabled.
-</p>
+<summary><a href="#+minifier.js.cache_enabled" id="+minifier.js.cache_enabled">cache_enabled</a></summary>
+<p>Control if caching mechanism is enabled.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.js.enabled" id="+minifier.js.enabled">
-enabled
-</a>
-</summary>
-<p>
-Control if JS minifier is enabled.
-</p>
+<summary><a href="#+minifier.js.enabled" id="+minifier.js.enabled">enabled</a></summary>
+<p>Control if JS minifier is enabled.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.js.enabled_on_serve" id="+minifier.js.enabled_on_serve">
-enabled_on_serve
-</a>
-</summary>
-<p>
-Control if JS minifier is enabled while page is being served locally (mostly used for content creation).
-</p>
+<summary><a href="#+minifier.js.enabled_on_serve" id="+minifier.js.enabled_on_serve">enabled_on_serve</a></summary>
+<p>Control if JS minifier is enabled while page is being served locally (mostly used for content creation).</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.js.exclude" id="+minifier.js.exclude">
-exclude
-</a>
-</summary>
-<p>
-Defines a list of exclusion patterns for files or directories that will not be minified.
-</p>
+<summary><a href="#+minifier.js.exclude" id="+minifier.js.exclude">exclude</a></summary>
+<p>Defines a list of exclusion patterns for files or directories that will not be minified.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.js.extensions" id="+minifier.js.extensions">
-exclude
-</a>
-</summary>
-<p>
-Defines a list of file extensions that will be minified.
-</p>
+<summary><a href="#+minifier.js.extensions" id="+minifier.js.extensions">exclude</a></summary>
+<p>Defines a list of file extensions that will be minified.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.js.uglifyjs_path" id="+minifier.js.uglifyjs_path">
-uglifyjs_path
-</a>
-</summary>
-<p>
-Path to
-<code>
-uglifyjs
-</code>
-tool.
-</p>
+<summary><a href="#+minifier.js.uglifyjs_path" id="+minifier.js.uglifyjs_path">uglifyjs_path</a></summary>
+<p>Path to <code>uglifyjs</code> tool.</p>
 </details>
 <details class="settings">
-<summary>
-<a href="#+minifier.js.skip_minified" id="+minifier.js.skip_minified">
-skip_minified
-</a>
-</summary>
-<p>
-Skip files that are already minified (usually one with
-<code>
-.min.js
-</code>
-extension).
-</p>
+<summary><a href="#+minifier.js.skip_minified" id="+minifier.js.skip_minified">skip_minified</a></summary>
+<p>Skip files that are already minified (usually one with <code>.min.js</code> extension).</p>
 </details>
 <hr>
-<p class="obsidian_backlink_title">
-Backlinks:
-</p>
+<p class="obsidian_backlink_title">Backlinks:</p>
 <div class="obsidian_backlink">
 <details class="backlink">
-<summary>
-v1.2.0 - 2023-10-17
-</summary>
-<p>
-</p><p class="obsidian_backlink">
-This release adds some more control over
-<a href="https://mkdocs-publisher.github.io/blog/v120/#6a588c73f0800a89bfc70e65ba1fe02c">
-minifier
-</a>
-plugin by adding the following settings:
-</p>
-<p></p>
+<summary>v1.2.0 - 2023-10-17</summary>
+<p></p><p class="obsidian_backlink">This release adds some more control over <a href="https://mkdocs-publisher.github.io/blog/v120/#6a588c73f0800a89bfc70e65ba1fe02c">minifier</a>plugin by adding the following settings:</p><p></p>
 </details>
 <details class="backlink">
-<summary>
-v1.4.1 - 2024-08-02
-</summary>
-<p>
-</p><p class="obsidian_backlink">
-It's just a very release that addresses update of
-<a href="https://www.mkdocs.org/">
-https://www.mkdocs.org/
-</a>
-to v1.6.0,
-<a href="https://squidfunk.github.io/mkdocs-material/">
-https://squidfunk.github.io/mkdocs-material/
-</a>
-to v9.5.31 and
-<a href="https://mkdocs-publisher.github.io/blog/v140/#6a588c73f0800a89bfc70e65ba1fe02c">
-minifier plugin
-</a>
-external tools dependencies. All code changes are purely related to those updates.
-</p>
-<p></p>
+<summary>v1.4.1 - 2024-08-02</summary>
+<p></p><p class="obsidian_backlink">It's just a very release that addresses update of <a href="https://www.mkdocs.org/">https://www.mkdocs.org/</a> to v1.6.0, <a href="https://squidfunk.github.io/mkdocs-material/">https://squidfunk.github.io/mkdocs-material/</a> to v9.5.31 and <a href="https://mkdocs-publisher.github.io/blog/v141/#6a588c73f0800a89bfc70e65ba1fe02c">minifier plugin</a>external tools dependencies. All code changes are purely related to those updates.</p><p></p>
 </details>
 </div>
 </article>
@@ -2611,10 +1310,7 @@ external tools dependencies. All code changes are purely related to those update
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
 </div>
 <button class="md-icon md-top" type="button" data-md-component="top" hidden>
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
 Back to top
 </button>
 </main>
@@ -2622,10 +1318,7 @@ Back to top
 <nav class="md-grid md-footer__inner" aria-label="Footer">
 <a href="../pub-social/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Setting up social cards">
 <div class="md-icon md-footer__button">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
 <div class="md-footer__title">
 <span class="md-footer__direction">
@@ -2646,10 +1339,7 @@ Setting up debugger
 </div>
 </div>
 <div class="md-icon md-footer__button">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z">
-</path>
-</svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
 </div>
 </a>
 </nav>
@@ -2662,34 +1352,23 @@ Setting up debugger
 Made with
 <a href="https://www.mkdocs.org/" rel="noopener" target="_blank">
 MkDocs
-</a>
-,
-<a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+</a>, <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
 Material for MkDocs
-</a>
-,
-<a href="https://mkdocs-publisher.github.io/" rel="noopener" target="_blank">
+</a>, <a href="https://mkdocs-publisher.github.io/" rel="noopener" target="_blank">
 MkDocs Publisher
-</a>
-and
-<a href="https://pages.github.com" rel="noopener" target="_blank">
+</a> and <a href="https://pages.github.com" rel="noopener" target="_blank">
 GitHub Pages
-</a>
-.
+</a>.
 </div>
 </div>
 </div>
 </footer>
 </div>
 <div class="md-dialog" data-md-component="dialog">
-<div class="md-typeset md-dialog__inner">
+<div class="md-typeset md-dialog__inner"></div>
 </div>
-</div>
-<div class="md-progress" data-md-component="progress" role="progressbar">
-</div>
-<script id="__config" type="application/json">
-{"base": "../../..", "features": ["navigation.tabs", "navigation.footer", "navigation.tracking", "navigation.top", "navigation.sections", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.action.view", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}
-</script>
+<div class="md-progress" data-md-component="progress" role="progressbar"></div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.footer", "navigation.tracking", "navigation.top", "navigation.sections", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.action.view", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
 <script src="../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
 <script src="../../../assets/javascripts/mathjax.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

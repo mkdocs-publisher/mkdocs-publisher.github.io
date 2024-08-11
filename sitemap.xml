@@ -17,7 +17,7 @@
     </url>
     <url>
          <loc>https://mkdocs-publisher.github.io/setup/general/pub-blog/</loc>
-         <lastmod>2023-10-03</lastmod>
+         <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
@@ -106,8 +106,13 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mkdocs-publisher.github.io/blog/v140/</loc>
+         <loc>https://mkdocs-publisher.github.io/blog/v141/</loc>
          <lastmod>2024-08-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mkdocs-publisher.github.io/blog/v142/</loc>
+         <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
@@ -131,17 +136,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mkdocs-publisher.github.io/index-0/</loc>
+         <loc>https://mkdocs-publisher.github.io/blog/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mkdocs-publisher.github.io/index-1/</loc>
+         <loc>https://mkdocs-publisher.github.io/blog/index-1/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mkdocs-publisher.github.io/index-2/</loc>
+         <loc>https://mkdocs-publisher.github.io/blog/index-2/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
