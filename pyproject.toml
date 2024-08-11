@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "mkdocs-publisher-docs"
 version = "1.4.1"
-description = "Documentation for Publisher for MkDocs"
+description = "Publisher for MkDocs documentation"
 authors = ["Maciej 'maQ' Kusz <maciej.kusz@gmail.com>"]
 license = "MIT License"
 readme = "README.md"

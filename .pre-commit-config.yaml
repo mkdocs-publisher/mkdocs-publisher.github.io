@@ -5,8 +5,8 @@ repos:
         name: check if README.md is updated
         description: Copy README.md file from documentation
         entry:
-          bash -c "cmp --silent ../mkdocs-publisher-docs/mkdocs_publisher_docs/README.md README.md ||
-          cp ../mkdocs-publisher-docs/mkdocs_publisher_docs/README.md README.md"
+          bash -c "cmp --silent mkdocs_publisher_docs/README.md README.md ||
+          cp mkdocs_publisher_docs/README.md README.md"
         language: system
         pass_filenames: false
 
