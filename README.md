@@ -22,7 +22,7 @@ Publisher for [MkDocs](https://www.mkdocs.org/) is a set of plugins that helps w
 	- index creation,
 	- support for blog post teasers,
 	- automatic creation of pages for archive, categories and tags,
-- [pub-obsidian](https://mkdocs-publisher.github.io/setup/general/pub-obsidian/) – bindings for [Obsidin.md](https://obsidian.md) that allows you to use:
+- [pub-obsidian](https://mkdocs-publisher.github.io/setup/general/pub-obsidian/) – bindings for [Obsidian.md](https://obsidian.md) that allows you to use:
 	- [backlinks](https://help.obsidian.md/Plugins/Backlinks),
 	- [callouts](https://help.obsidian.md/Editing+and+formatting/Callouts),
 	- [wikilinks](https://help.obsidian.md/Linking+notes+and+files/Internal+links),
