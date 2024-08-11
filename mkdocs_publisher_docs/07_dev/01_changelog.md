@@ -4,7 +4,7 @@ icon: material/file-replace-outline
 slug: changelog
 publish: true
 date: 2023-02-12 22:00:00
-update: 2024-07-16 15:42:54
+update: 2024-08-02 23:27:46
 description: Publisher for MkDocs version history
 categories:
   - general
@@ -12,6 +12,14 @@ categories:
 ---
 
 # Version history
+
+## 1.4.1
+
+### :material-list-box: General
+
+- ♻️ update dependency for mkdocs v1.6.0
+- ♻️ update dependency for mkdocs-material v9.5.31
+- ♻️ update pub-minifier external tools dependencies
 
 ## 1.4.0
 

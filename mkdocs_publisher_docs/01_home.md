@@ -3,7 +3,7 @@ title: Home
 slug: .
 publish: true
 date: 2023-03-12 12:27:00
-update: 2024-07-15 21:27:54
+update: 2024-08-11 12:32:03
 description: Publisher for MkDocs - why to use? Simply because its compatible with Obsidian.md Publish and supports WikiLinks, backlinks and some additional plugins. It also simplifies MkDocs navigation building process and helps with SEO optimization.
 categories:
   - start
@@ -12,7 +12,7 @@ hide: [toc, navigation]
 
 # What is MkDocs Publisher?
 
-It is a set of plugins that extends [MkDocs](https://www.mkdocs.org/) with a set of plugins, that help to create, edit and publish your content.
+It is a set of plugins that extends [MkDocs](https://www.mkdocs.org/) with a [set of plugins](03_setup/01_installation.md), that help to create, edit and publish your content.
 
 # Why to use MkDocs Publisher?
 
@@ -43,7 +43,7 @@ It is a set of plugins that extends [MkDocs](https://www.mkdocs.org/) with a set
 
 > [!none] :material-select-compare: Size reduction
 > Documentation files and images can be minified to reduce their size and page load time (it also helps with SEO).
-
+>
 </div>
 
 <div class="grid" markdown>
@@ -65,20 +65,3 @@ It is a set of plugins that extends [MkDocs](https://www.mkdocs.org/) with a set
 > Project is open source and distributed under [MIT License](https://opensource.org/license/mit), so you have full freedom to expand and use this project the way most convenient for you.
 
 </div>
-
-<!--
-
-# More than just a documentation
-
-
-
-<div style="overflow: auto;" markdown>
-[![Image title](https://dummyimage.com/300x200/eee/aaa){ align=left }](test)
-
-## **dsfsdfsd**
-sdfsdfsdfs f
-</div>
-
-asdasd
-
--->
