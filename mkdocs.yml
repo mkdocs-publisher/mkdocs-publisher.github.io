@@ -33,6 +33,13 @@ extra_javascript:
 watch:
   - overrides
 
+validation:
+  omitted_files: warn
+  not_found: warn
+  absolute_links: warn
+  unrecognized_links: ignore
+  anchors: warn
+
 theme:
   name: material
   language: en

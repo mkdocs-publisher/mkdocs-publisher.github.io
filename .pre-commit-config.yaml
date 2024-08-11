@@ -1,4 +1,16 @@
 repos:
+  - repo: local
+    hooks:
+      - id: check-readme-md
+        name: check if README.md is updated
+        description: Copy README.md file from documentation
+        entry:
+          bash -c "cmp --silent ../mkdocs-publisher-docs/mkdocs_publisher_docs/README.md README.md ||
+          cp ../mkdocs-publisher-docs/mkdocs_publisher_docs/README.md README.md"
+        language: system
+        pass_filenames: false
+
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
     hooks:
