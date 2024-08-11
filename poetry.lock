@@ -398,13 +398,13 @@ files = [
 
 [[package]]
 name = "mkdocs-publisher"
-version = "1.4.1"
+version = "1.4.2"
 description = "Publisher for MkDocs - set of plugins for content creators"
 optional = false
 python-versions = "<4.0,>=3.9"
 files = [
-    {file = "mkdocs_publisher-1.4.1-py3-none-any.whl", hash = "sha256:839aef6db5d49829eb39ecc0ee24d01d7e15d6a4d3a19bbce0b2f5fdc303125e"},
-    {file = "mkdocs_publisher-1.4.1.tar.gz", hash = "sha256:cb402ac0e1d03baa6b7d186f9510e5f730f05975c7217b11ba76310e76df4bdb"},
+    {file = "mkdocs_publisher-1.4.2-py3-none-any.whl", hash = "sha256:ba592b66fedd1fadc63b8042b9b1ec824281a28d3d2f04ea9569b0943cb387dc"},
+    {file = "mkdocs_publisher-1.4.2.tar.gz", hash = "sha256:efd339ffd3c93f1e574df744d37b93a62585b48d40dcac7bbad32551bbe4f8c7"},
 ]
 
 [package.dependencies]
@@ -797,4 +797,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "6505ceaac866882a2c549d465158442e9cc46de675a8de4790564bbcf8ecef55"
+content-hash = "2e245e47e9007f9e3bcc37f0f5f4ad30680391c7cae4ab43d387f9dc58b4f5e7"

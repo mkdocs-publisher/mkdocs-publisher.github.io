@@ -1,15 +1,16 @@
 [tool.poetry]
 name = "mkdocs-publisher-docs"
-version = "1.4.1"
+version = "1.4.2"
 description = "Publisher for MkDocs documentation"
 authors = ["Maciej 'maQ' Kusz <maciej.kusz@gmail.com>"]
 license = "MIT License"
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"
 yamllint = "^1.35.1"
-mkdocs-publisher = "^1.4.1"
+mkdocs-publisher = "^1.4.2"
 
 [build-system]
 requires = ["poetry-core"]

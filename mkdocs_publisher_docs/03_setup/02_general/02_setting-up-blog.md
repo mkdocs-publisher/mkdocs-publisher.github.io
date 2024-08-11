@@ -4,7 +4,7 @@ icon: material/newspaper-variant-multiple
 slug: pub-blog
 publish: true
 date: 2023-02-12 22:00:00
-update: 2023-10-03 12:27:41
+update: 2024-08-11 23:30:09
 description: Setting up a Publisher for MkDocs blog plugin for blogging functionality
 categories:
   - setup
@@ -29,7 +29,7 @@ All the above documents are created outside `docs` directory, so they are not vi
 This documentation contains a [blog](../../../blog/) that is created using this plugin, so you can take a look at a living example.
 
 
-> [!TIP] Date format
+> [!tip] Date format
 > Currently, the date format of a blog posts is not configurable and has to look like this:
 > ``` yaml
 > ---
@@ -37,6 +37,9 @@ This documentation contains a [blog](../../../blog/) that is created using this 
 > ---
 > ```
 > There is also a requirement, that each blog post, have to contain an unique date because without this, the algorithm responsible for posts display ordering (from newest to oldest) will not work correctly.
+
+> [!warning] Slug
+> You need to provide a `slug` for every blog post. Without it, during a build, it will throw an unrecoverable error. It's going to be changed, so it will work the same as for [Slug](01_setting-up-meta.md#Slug).
 
 ## Configuration
 
