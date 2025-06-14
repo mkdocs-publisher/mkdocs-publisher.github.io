@@ -7,7 +7,7 @@ on:
   schedule:
     - cron: '0 */8 * * *'
 jobs:
-  deploy-pages:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Install poetry
@@ -58,19 +58,23 @@ jobs:
           path: |
             *_mkdocs_build.log
             *_mkdocs_debug.zip
-      - name: Commit static site to repository with GitHub Pages enabled
-        uses: cpina/github-action-push-to-another-repository@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.DEPLOY_PAGES_TOKEN }}
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
         with:
-          user-name: ${{ secrets.USER_NAME }}
-          user-email: ${{ secrets.USER_EMAIL }}
-          source-directory: docs
-          destination-github-username: ${{ secrets.USER_NAME }}
-          destination-repository-name: mkdocs-publisher.github.io
-          target-branch: docs
+          path: docs/
       - name: Save MkDocs files cache
         uses: actions/cache/save@v3
         with:
           path: .pub_min_cache
           key: mkdocs-publisher-cache-${{ github.run_id }}
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
