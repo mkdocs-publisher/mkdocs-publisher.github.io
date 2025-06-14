@@ -3,7 +3,7 @@ site_url: https://mkdocs-publisher.github.io/
 site_author: Maciej 'maQ' Kusz
 site_description: Publishing plugin for MkDocs
 copyright: >
-  &copy; 2023-2024 Maciej 'maQ' Kusz
+  &copy; 2023-2025 Maciej 'maQ' Kusz
 
 repo_name: mkdocs-publisher
 repo_url: https://github.com/mkdocs-publisher/mkdocs-publisher/
@@ -50,7 +50,6 @@ theme:
   favicon: publisher_icon.png
 
   palette:
-
     # Palette toggle for light mode
     - scheme: default
       toggle:
@@ -70,11 +69,11 @@ theme:
   features:
     - navigation.tabs
     # - navigation.tabs.sticky
-    - navigation.footer  # Prev/Next page
-    - navigation.tracking  # Anchor tracking
-    - navigation.top  # Back to top
-    - navigation.sections  # Useful for an overview
-    - navigation.indexes  # Needed for an overview
+    - navigation.footer # Prev/Next page
+    - navigation.tracking # Anchor tracking
+    - navigation.top # Back to top
+    - navigation.sections # Useful for an overview
+    - navigation.indexes # Needed for an overview
     - navigation.instant
     - navigation.instant.progress
     - search.suggest
@@ -92,6 +91,7 @@ markdown_extensions:
   - attr_list
   - def_list
   - footnotes
+  - nl2br
   - md_in_html
   - sane_lists
   - tables
@@ -137,22 +137,22 @@ markdown_extensions:
 plugins:
   - pub-debugger:
       console_log:
-#        show_code_link: true
+        #        show_code_link: true
         enabled: true
-#        log_level: DEBUG
-#        filter_logger_names:
-#          - mkdocs.plugins
-#          - mkdocs.structure.files
-#          - mkdocs.structure.pages
-#          - mkdocs.plugins.publisher.meta.plugin
-#          - mkdocs.plugins.publisher.blog.creators
-#          - mkdocs.plugins.publisher.blog.modifiers
-#          - mkdocs.plugins.publisher.blog.parsers
-#          - mkdocs.plugins.publisher.debug.plugin
-#          - mkdocs.plugins.publisher.minifier.base
-#          - mkdocs.plugins.publisher.minifier.plugin
-#          - mkdocs.plugins.publisher.social.plugin
-#          - mkdocs.commands.build
+  #        log_level: DEBUG
+  #        filter_logger_names:
+  #          - mkdocs.plugins
+  #          - mkdocs.structure.files
+  #          - mkdocs.structure.pages
+  #          - mkdocs.plugins.publisher.meta.plugin
+  #          - mkdocs.plugins.publisher.blog.creators
+  #          - mkdocs.plugins.publisher.blog.modifiers
+  #          - mkdocs.plugins.publisher.blog.parsers
+  #          - mkdocs.plugins.publisher.debug.plugin
+  #          - mkdocs.plugins.publisher.minifier.base
+  #          - mkdocs.plugins.publisher.minifier.plugin
+  #          - mkdocs.plugins.publisher.social.plugin
+  #          - mkdocs.commands.build
   - search
   - pub-blog:
       blog_dir: 06_blog

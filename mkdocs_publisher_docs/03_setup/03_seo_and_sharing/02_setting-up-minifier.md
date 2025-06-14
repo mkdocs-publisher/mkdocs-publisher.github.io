@@ -256,8 +256,8 @@ Using this tool reduces JPEG image file size up to 30% with almost no visible qu
 ``` yaml hl_lines="3-16"
 plugins:
   - pub-minifier:
-	jpeg:
-	    cache_enabled: true
+	  jpeg:
+		cache_enabled: true
 		enabled: true
 		enabled_on_serve: false
 		exclude: []
@@ -325,7 +325,7 @@ Using those tools together, can reduce PNG image file size by up to 70% with alm
 ``` yaml hl_lines="3-16"
 plugins:
   - pub-minifier:
-	png:
+	  png:
 		cache_enabled: true
 		enabled: true
 		enabled_on_serve: false
@@ -394,7 +394,7 @@ Using this tool reduces SVG vector image file size by up to 70% with no visible 
 ``` yaml hl_lines="3-10"
 plugins:
   - pub-minifier:
-	svg:
+	  svg:
 		cache_enabled: true
 		enabled: true
 		enabled_on_serve: false
@@ -439,7 +439,7 @@ Using this tool reduces HTML file size by up to 30%. You can always try to chang
 ``` yaml hl_lines="3-21"
 plugins:
   - pub-minifier:
-	html:
+	  html:
 		cache_enabled: true
 		enabled: true
 		enabled_on_serve: false
@@ -537,7 +537,7 @@ Using this tool reduces CSS file size by up to 30%. At this time, the `pub-minif
 ``` yaml hl_lines="3-10"
 plugins:
   - pub-minifier:
-	css:
+	  css:
 		cache_enabled: true
 		enabled: true
 		enabled_on_serve: false
@@ -583,7 +583,7 @@ Using this tool reduces JS file size by up to 20%. At this time, the `pub-minifi
 ``` yaml hl_lines="3-10"
 plugins:
   - pub-minifier:
-	js:
+	  js:
 		cache_enabled: true
 		enabled: true
 		enabled_on_serve: false
